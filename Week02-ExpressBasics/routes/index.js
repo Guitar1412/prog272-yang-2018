@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) { 'use strict';
-  res.render('index', { title: 'Week02-ExpressBasics' });
+  res.render('index', { title: 'Week02-ExpressBasics-Yang' });
 });
 
 module.exports = router;
