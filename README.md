@@ -2,3 +2,5 @@
 This is my repo for class Prog272.
 
 I added this in Cloud 9.
+
+I added this on Pristine Lubuntu.
