@@ -10,7 +10,6 @@ class App extends Component {
 		foo: 'waiting'
 			};
 		}
-
   render() {
     return (
       <div className="App">
@@ -20,12 +19,13 @@ class App extends Component {
         </header>
         <p className="App-intro">Nine: {this.state.nine}</p>
 		<button id='getFile' onClick={this.getFile}>Get File</button>
-		<p>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
+  getFile = () => {
+			console.log('getFile called.');
+			this.setState({file: 'url-file.js'})
+			}
 }
 
 export default App;

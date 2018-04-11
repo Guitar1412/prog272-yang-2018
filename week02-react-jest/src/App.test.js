@@ -17,15 +17,12 @@ describe('jest test', function() {
        const welcome = <h2>Welcome to React</h2>;
        expect(wrapper.contains(welcome)).toEqual(true);
    });
-           getFile = () => {
-			console.log('getFile called.'),
-			this.setState({file: 'url-file.js'})
-			};
+           
    it.only('renders state of File paragraph after button click', () => {
    const wrapper = shallow(<App />);
    const nineSign = <p className="App-intro">file: url-file.js</p>;
    wrapper.find('#getNine').simulate('click');
    expect(wrapper.contains(nineSign)).toEqual(true);
 });
-
+	
 });
