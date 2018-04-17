@@ -10,22 +10,25 @@ class App extends Component {
 		foo: 'waiting'
 			};
 		}
+
+    getFile = () => {
+        console.log('getFile called.');
+        this.setState({file: 'url-file.js'})
+    };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h2 className="App-title">Welcome to React</h2>
         </header>
-        <p className="App-intro">Nine: {this.state.file}</p>
+        <p className="App-intro">file: {this.state.file}</p>
 		<button id='getFile' onClick={this.getFile}>Get File</button>
       </div>
     );
   }
-  getFile = () => {
-			console.log('getFile called.');
-			this.setState({file: 'url-file.js'})
-			}
+
 }
 
 export default App;
