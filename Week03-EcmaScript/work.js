@@ -32,7 +32,7 @@ const address = {
 const displayAddress = (address) => {
     for (let property in address) {
         if (address.hasOwnProperty(property)) {
-            console.log(property);
+            console.log(property+ ': ' +address[property]);
         }
     }
 };
