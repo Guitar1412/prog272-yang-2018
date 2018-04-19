@@ -4,7 +4,8 @@
   "description": "\"Learn about ES6\"",
   "main": "work.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel work.js -d bundle"
   },
   "repository": {
     "type": "git",
