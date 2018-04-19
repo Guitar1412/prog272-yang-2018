@@ -1,0 +1,28 @@
+{
+  "name": "week03-ecmascript",
+  "version": "1.0.0",
+  "description": "\"Learn about ES6\"",
+  "main": "work.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Guitar1412/prog272-yang-2018.git"
+  },
+  "keywords": [
+    "ES6",
+    "Babel"
+  ],
+  "author": "Shawn Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guitar1412/prog272-yang-2018/issues"
+  },
+  "homepage": "https://github.com/Guitar1412/prog272-yang-2018#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1"
+  }
+}
