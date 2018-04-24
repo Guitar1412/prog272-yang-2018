@@ -129,8 +129,4 @@ describe('Jest Tests', function() {
         expect(wrapper.contains(nineSign)).toBe(true);
     });
 
-    //tests for address
-
-
-
 });

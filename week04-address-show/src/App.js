@@ -26,14 +26,16 @@ class App extends Component {
 
     setAddress =()=>{
         console.log('Address called.');
-        this.setState({firstName: 'Patty'});
-        this.setState({lastName: 'Murray'});
-        this.setState({street: '123 NW AVE'});
-        this.setState({city: 'Kirkland'});
-        this.setState({state: 'WA'});
-        this.setState({zip: '252422'});
-        this.setState({county: 'King'});
-        this.setState({phoneNumber: '425-111-3232'});
+        this.setState({
+            firstName: 'Patty',
+            lastName: 'Murray',
+            street: '123 NW AVE',
+            city: 'Kirkland',
+            state: 'WA',
+            zip: '252422',
+            county: 'King',
+            phoneNumber: '425-111-3232'
+        });
     };
 
     render() {
@@ -44,8 +46,17 @@ class App extends Component {
                     <h2 className="App-title">Welcome to React</h2>
                 </header>
                 <p className="App-intro">File: {this.state.file}</p>
+                <p className="App-intro">FirstName: {this.state.firstName}</p>
+                <p className="App-intro">LastName: {this.state.lastName}</p>
+                <p className="App-intro">Street: {this.state.street}</p>
+                <p className="App-intro">City: {this.state.city}</p>
+                <p className="App-intro">State: {this.state.state}</p>
+                <p className="App-intro">Zip: {this.state.zip}</p>
+                <p className="App-intro">County: {this.state.county}</p>
+                <p className="App-intro">PhoneNumber: {this.state.phoneNumber}</p>
                 <button id='getFile' onClick={this.getFile}>Get File</button>
-                <hr />
+                <button id='setAddress' onClick={this.setAddress}>Set Address</button>
+
             </div>
         );
     }
