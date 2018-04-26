@@ -7,7 +7,7 @@ configure({adapter: new Adapter()});
 
 describe('Jest Tests', function() {
 
-   it('renders without crashing', () => {
+   it.only('renders without crashing', () => {
        const div = document.createElement('div');
        ReactDOM.render(<App />, div);
    });
