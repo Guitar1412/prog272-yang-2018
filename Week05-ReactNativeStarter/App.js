@@ -26,8 +26,10 @@ export default class App extends React.Component {
     fetchMicro = () => {
         this.setState({foo: 'fetcher king'});
         const that = this;
-        const ip = 'ccalvert.com';
-        fetch('http://' + ip + ':30027/you-rang')
+        //const ip = 'ccalvert.com';
+        const ip = '168.156.46.55';
+        //fetch('http://' + ip + ':30027/you-rang')
+        fetch('http://' + ip + ':30025/search')
             .then((response) => response.json())
             .then(function (result) {
                 //console.log(result);
