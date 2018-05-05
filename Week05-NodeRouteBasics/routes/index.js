@@ -17,4 +17,17 @@ router.get('/search', function(req, res, next) {
     });
 });
 
+router.get('/getFeetInMile', function(req, res, next) {
+    'use strict';
+    console.log("Server side Search called.");
+    //document.write('Feet In Mile: ');
+    res.send({
+        result: '5280'
+    });
+});
+
+router.get('/calculateFeetFromMiles', function(req, res) {
+    res.send({result: req.query.miles * 5280});
+});
+
 module.exports = router;
