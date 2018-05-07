@@ -22,12 +22,16 @@ router.get('/getFeetInMile', function(req, res, next) {
     console.log("Server side Search called.");
     //document.write('Feet In Mile: ');
     res.send({
-        result: '5280'
+        result: '5280 feet in one mile.'
     });
 });
 
 router.get('/calculateFeetFromMiles', function(req, res) {
     res.send({result: req.query.miles * 5280});
+});
+
+router.get('/calculateCircumference', function(req, res) {
+    res.send({result: req.query.radius});
 });
 
 module.exports = router;
