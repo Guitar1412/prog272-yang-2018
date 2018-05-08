@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import '../App.css';
+import '../css/App.css';
+//import addressList from '../address-list';
+//import AddressShow from './AddressShow';
 
 class App extends Component {
     constructor(props) {
@@ -30,7 +32,12 @@ class App extends Component {
     setAddress = () => {
         const address = this.props.addressList[1];
 
+        /*if (this.debug){
+            console.log ()
+        }*/
+        //this.addressIndex = 1;
         this.setState({
+            //address: addressList[this.addressIndex]
             firstName: address.firstName,
             lastName: address.lastName,
             address: address.address,
@@ -58,7 +65,10 @@ class App extends Component {
                 <p className="App-intro">Tollfree: {this.state.tollfree}</p>
                 <p className="App-intro">Website: {this.state.website}</p>
                 <button id='setAddress' onClick={this.setAddress}>Set Address</button>
-
+                /*<AddressShow>
+                    address={this.state.address}
+                    setAddress={this.setAddress}
+                </AddressShow>*/
             </div>
         );
     }

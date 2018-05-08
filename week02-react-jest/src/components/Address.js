@@ -58,7 +58,6 @@ class App extends Component {
                 <p className="App-intro">Tollfree: {this.state.tollfree}</p>
                 <p className="App-intro">Website: {this.state.website}</p>
                 <button id='setAddress' onClick={this.setAddress}>Set Address</button>
-
             </div>
         );
     }
