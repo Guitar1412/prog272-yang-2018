@@ -7,7 +7,7 @@ configure({adapter: new Adapter()});
 
 describe('Jest Tests', function() {
 
-   it('renders without crashing', () => {
+   it.only('renders without crashing', () => {
        const div = document.createElement('div');
        ReactDOM.render(<App />, div);
    });
@@ -128,5 +128,9 @@ describe('Jest Tests', function() {
         wrapper.find('#setAddress').simulate('click');
         expect(wrapper.contains(nineSign)).toBe(true);
     });
+
+    //tests for address
+
+
 
 });
