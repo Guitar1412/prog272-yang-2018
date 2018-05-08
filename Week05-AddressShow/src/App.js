@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './css/App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Address from './components/Address';
+import GetFile from './components/GetFile';
 
 class App extends Component {
     constructor() {
@@ -38,7 +42,12 @@ class App extends Component {
 
     render() {
         return (
+            <BrowserRouter>
+
             <div className="App">
+                <Header />
+                <Route exact path="/" component={Address}/>
+                <Route path="/get-file" component={GetFile}/>
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2 className="App-title">Welcome to React</h2>
@@ -47,6 +56,7 @@ class App extends Component {
                 <button id='getFile' onClick={this.getFile}>Get File</button>
                 <hr />
             </div>
+            </BrowserRouter>
         );
     }
 
