@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import '../App.css';
+import '../css/App.css';
 
-class App extends Component {
+class AddressShow extends Component {
     constructor(props) {
         super(props);
 
@@ -20,12 +20,7 @@ class App extends Component {
             website: address.website
         }
 
-    };
-
-    getFile = () => {
-        console.log('getFile called.');
-        this.setState({file: 'url-file.js'})
-    };
+    }
 
     setAddress = () => {
         const address = this.props.addressList[1];
@@ -64,4 +59,4 @@ class App extends Component {
 
 }
 
-export default App;
+export default AddressShow;
