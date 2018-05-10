@@ -1,10 +1,18 @@
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import logo from '../logo.svg';
+import '../css/App.css';
 
-<div>
-    <div className="App">
-        <ul>
-            <li><Link to="/">Address</Link></li>
-            <li><Link to="/get-file">Get File</Link></li>
-        </ul>
-    </div>
-</div>
+class Header extends Component {
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h2 className="App-title">Welcome to React</h2>
+                </header>
+            </div>
+        );
+    }
+}
+
+export default Header;

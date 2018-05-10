@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import '../css/App.css';
-import addresses from '../address-list';
+import logo from './logo.svg';
+import './App.css';
 
-class Address extends Component {
+class App extends Component {
     constructor() {
         super();
         this.state = {
@@ -19,6 +19,11 @@ class Address extends Component {
         };
     }
 
+    getFile = () => {
+        console.log('getFile called.');
+        this.setState({file: 'url-file.js'})
+    };
+
     setAddress =()=>{
         console.log('Address called.');
         this.setState({firstName: 'Patty'});
@@ -30,6 +35,21 @@ class Address extends Component {
         this.setState({county: 'King'});
         this.setState({phoneNumber: '425-111-3232'});
     };
+
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h2 className="App-title">Welcome to React</h2>
+                </header>
+                <p className="App-intro">File: {this.state.file}</p>
+                <button id='getFile' onClick={this.getFile}>Get File</button>
+                <hr />
+            </div>
+        );
+    }
+
 }
 
-export default Address;
+export default App;

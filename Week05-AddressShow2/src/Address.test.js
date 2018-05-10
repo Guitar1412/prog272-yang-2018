@@ -20,26 +20,6 @@ describe('Jest Tests', function() {
         wrapper.find('#setAddress').simulate('click');
         expect(wrapper.contains(nineSign)).toBe(true);
     });
-
-    it('renders without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<Address/>, div);
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
-    it('renders and displays the default first name', () => {
-        const wrapper = shallow(<Address/>);
-        //console.log(wrapper.find('AddressShow').prop('address'));
-        expect(wrapper.find('AddressShow').prop('address').firstName).toEqual('unknown');
-    });
-
-    it('renders state of firstName after button click', () => {
-        const wrapper = shallow(<Address addressList={AddressList}/>);
-        wrapper.instance().setAddress();
-        setImmediate(() => {
-            wrapper.update();
-            expect(wrapper.find('AddressShow').prop('address').firstName).toEqual('Patty');
-        });
     //tests for address
 
 
