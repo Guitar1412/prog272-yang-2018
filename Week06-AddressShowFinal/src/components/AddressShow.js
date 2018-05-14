@@ -6,8 +6,8 @@ class AddressShow extends Component {
     render() {
         return (
             <div className="App">
-                <p className="App-intro">FirstName: {this.props.address.firstName}</p>
-                <p className="App-intro">LastName: {this.props.address.lastName}</p>
+                <p className="App-intro">First Name: {this.props.address.firstName}</p>
+                <p className="App-intro">Last Name: {this.props.address.lastName}</p>
                 <p className="App-intro">Address: {this.props.address.address}</p>
                 <p className="App-intro">City: {this.props.address.city}</p>
                 <p className="App-intro">State: {this.props.address.state}</p>
