@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Address from './components/Address';
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import addresses from "./address-list";
+import addresses from './address-list';
 configure({adapter: new Adapter()});
 
 describe('Jest Tests', function() {

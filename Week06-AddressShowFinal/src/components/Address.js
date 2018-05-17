@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../css/App.css';
-import AddressList from '../address-list'
-import AddressShow from './AddressShow'
+import AddressList from '../address-list';
+import AddressShow from './AddressShow';
 
 class Address extends Component {
     constructor(props) {
@@ -27,11 +27,11 @@ class Address extends Component {
 
 
     render() {
-        if (this.debug) { console.log("ADDRESS RENDER"); }
+        if (this.debug) { console.log('ADDRESS RENDER'); }
         return (
             <div className="App">
                 <AddressShow address={this.state.address}
-                setAddress={this.setAddress}/>
+                    setAddress={this.setAddress}/>
             </div>
         );
     }

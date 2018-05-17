@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../css/App.css';
+import PropTypes from 'prop-types';
 
 class AddressShow extends Component {
 
@@ -15,12 +16,25 @@ class AddressShow extends Component {
                 <p className="App-intro">Phone: {this.props.address.phone}</p>
                 <p className="App-intro">Fax: {this.props.address.fax}</p>
                 <p className="App-intro">Tollfree: {this.props.address.tollfree}</p>
-                <p className="App-intro">Website: {this.props.address.website}</p>
                 <button id='setAddress' onClick={this.props.setAddress}>Set Address</button>
             </div>
         );
     }
 
 }
+AddressShow.propTypes = {
+    address: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        address: PropTypes.string,
+        city: PropTypes.string,
+        state: PropTypes.string,
+        zip: PropTypes.string,
+        phone: PropTypes.string,
+        fax: PropTypes.string,
+        tollfree: PropTypes.string
+    }),
+    setAddress: PropTypes.func
+};
 
 export default AddressShow;

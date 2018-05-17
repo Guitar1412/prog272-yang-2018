@@ -5,12 +5,12 @@ class GetFile extends Component {
         super(props);
         this.state = {
             file: 'unknown'
-        }
+        };
     }
 
     getFile = () => {
         console.log('getFile called.');
-        this.setState({file: 'url-file.js'})
+        this.setState({file: 'url-file.js'});
     };
 
     render() {

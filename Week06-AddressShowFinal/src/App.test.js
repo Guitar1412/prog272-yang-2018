@@ -7,10 +7,10 @@ configure({adapter: new Adapter()});
 
 describe('Jest Tests', function() {
 
-   it.only('renders without crashing', () => {
-       const div = document.createElement('div');
-       ReactDOM.render(<App />, div);
-   });
+    it.only('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<App />, div);
+    });
 
     it('renders and reads H2 text', () => {
         const wrapper = shallow(<App />);
