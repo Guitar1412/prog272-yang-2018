@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import '../css/App.css';
 import PropTypes from 'prop-types';
-
+import RaisedButton from 'material-ui/RaisedButton';
+import ActionAndroid from 'material-ui/svg-icons/action/android';
+import styles from './elf-styles';
 class AddressShow extends Component {
 
     render() {
@@ -16,12 +18,20 @@ class AddressShow extends Component {
                 <p className="App-intro">Phone: {this.props.address.phone}</p>
                 <p className="App-intro">Fax: {this.props.address.fax}</p>
                 <p className="App-intro">Tollfree: {this.props.address.tollfree}</p>
-                <button id='setAddress' onClick={this.props.setAddress}>Set Address</button>
+                {/*<button id='setAddress' onClick={this.props.setAddress}>Set Address</button>*/}
+                <RaisedButton
+                    label="Set Address"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<ActionAndroid />}
+                    style={styles.button}
+                    onClick={this.props.setAddress}
+                />
             </div>
         );
     }
-
 }
+
 AddressShow.propTypes = {
     address: PropTypes.shape({
         firstName: PropTypes.string,
