@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../css/App.css';
-import AddressList from '../address-list';
+import AddressList from './address-list';
 import AddressShow from './AddressShow';
 
 class Address extends Component {
