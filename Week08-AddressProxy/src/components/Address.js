@@ -35,7 +35,9 @@ class Address extends Component {
             })
     }
     setAddress = (offset) => {
-        this.addressIndex = 1;
+        if(this.debug) {
+            console.log('setAddress called');
+        }
         this.addressIndex += offset;
         this.setState ({
             address: addressList[this.addressIndex]
