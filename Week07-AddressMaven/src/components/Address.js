@@ -53,9 +53,9 @@ class Address extends Component {
         return (
             <div className="App">
                 <AddressShow address={this.state.address}
-                    setAddress={this.setAddress}/>
+                    setAddress={this.setAddress}
                     setAddressNext={this.setAddressNext}
-                    setAddressBack={this.setAddressBack}
+                    setAddressBack={this.setAddressBack}/>
             </div>
         );
     }
