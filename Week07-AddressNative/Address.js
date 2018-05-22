@@ -26,6 +26,22 @@ export default class Address extends React.Component {
         this.debug = true;
     };
 
+    setAddressNext = () => {
+        this.setState ({
+            address: AddressList[this.addressIndex ++]
+        });
+        this.debug = true;
+    };
+
+    setAddressBack = () => {
+        this.setState ({
+            address: AddressList[this.addressIndex --]
+        });
+        if(this.addressIndex = 1)
+            this.addressIndex = 4;
+        this.debug = true;
+    };
+
     render() {
         return (
             <View style={styles.container}>
@@ -34,7 +50,10 @@ export default class Address extends React.Component {
                 </Text>
                 <View className="App">
                     <AddressShow address={this.state.address}
-                                 setAddress={this.setAddress}/>
+                                 setAddress={this.setAddress}
+                                 setAddressNext={this.setAddressNext}
+                                 setAddressBack={this.setAddressBack}
+                    />
                 </View>
             </View>
         );

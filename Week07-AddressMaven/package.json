@@ -1,7 +1,8 @@
 {
-  "name": "week02-react-jest",
+  "name": "week08-AddressMaven",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:30026",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
