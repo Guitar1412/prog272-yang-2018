@@ -25,6 +25,28 @@ class Address extends Component {
         this.debug = true;
     };
 
+    setAddressNext = () => {
+        this.setState ({
+            address: AddressList[this.addressIndex ++]
+        });
+        if (this.addressIndex >= 5)
+        {
+            this.addressIdex = 1;
+        }
+
+        this.debug = true;
+    };
+
+    setAddressBack = () => {
+        this.setState ({
+            address: AddressList[this.addressIndex --]
+        });
+        if(this.addressIndex <= 1){
+            this.addressIndex = 5;
+        }
+        this.debug = true;
+    };
+
 
     render() {
         if (this.debug) { console.log('ADDRESS RENDER'); }
@@ -32,6 +54,8 @@ class Address extends Component {
             <div className="App">
                 <AddressShow address={this.state.address}
                     setAddress={this.setAddress}/>
+                    setAddressNext={this.setAddressNext}
+                    setAddressBack={this.setAddressBack}
             </div>
         );
     }

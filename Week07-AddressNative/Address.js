@@ -30,6 +30,11 @@ export default class Address extends React.Component {
         this.setState ({
             address: AddressList[this.addressIndex ++]
         });
+        if (this.addressIndex >= 5)
+		{
+			this.addressIdex = 1;
+		}
+		
         this.debug = true;
     };
 
@@ -37,8 +42,9 @@ export default class Address extends React.Component {
         this.setState ({
             address: AddressList[this.addressIndex --]
         });
-        if(this.addressIndex = 1)
-            this.addressIndex = 4;
+        if(this.addressIndex <= 1){
+            this.addressIndex = 5;
+            }
         this.debug = true;
     };
 

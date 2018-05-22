@@ -27,6 +27,22 @@ class AddressShow extends Component {
                     style={styles.button}
                     onClick={this.props.setAddress}
                 />
+                <RaisedButton
+                    label="Set Address Left"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<ActionAndroid />}
+                    style={styles.button}
+                    onClick={this.props.setAddressBack}
+                />
+                <RaisedButton
+                    label="Set Address Right"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<ActionAndroid />}
+                    style={styles.button}
+                    onClick={this.props.setAddressNext}
+                />
             </div>
         );
     }
@@ -44,7 +60,9 @@ AddressShow.propTypes = {
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),
-    setAddress: PropTypes.func
+    setAddress: PropTypes.func,
+    setAddressBack: PropTypes.func,
+    setAddressNext: PropTypes.func
 };
 
 export default AddressShow;
