@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import '../css/App.css';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import ActionAndroid from 'material-ui/svg-icons/action/android';
+import { red500 } from 'material-ui/styles/colors';
+//import ActionAndroid from 'material-ui/svg-icons/action/android';
 import styles from './elf-styles';
+import FontIcon from 'material-ui/FontIcon';
+
 class AddressShow extends Component {
 
     render() {
@@ -19,19 +22,29 @@ class AddressShow extends Component {
                 <p className="App-intro">Fax: {this.props.address.fax}</p>
                 <p className="App-intro">Tollfree: {this.props.address.tollfree}</p>
                 {/*<button id='setAddress' onClick={this.props.setAddress}>Set Address</button>*/}
+                {/*<RaisedButton*/}
+                    {/*label="Set Address"*/}
+                    {/*labelPosition="before"*/}
+                    {/*primary={true}*/}
+                    {/*icon={<ActionAndroid />}*/}
+                    {/*style={styles.button}*/}
+                    {/*onClick={(event) => this.props.setAddress(1, event)}*/}
+                {/*/>*/}
                 <RaisedButton
-                    label="Set Address"
-                    labelPosition="before"
+                    id="setAddress2"
                     primary={true}
-                    icon={<ActionAndroid />}
                     style={styles.button}
-                    onClick={(event) => this.props.setAddress(1, event)}
-                />
+                    icon={<FontIcon
+                        className="material-icons" color={red500}>arrow_back_ios</FontIcon>}
+                    onClick={(event) => this.props.setAddress(-1, event)}>
+                </RaisedButton>
                 <RaisedButton
                     id="setAddress"
                     primary={true}
-                    onClick={(event) => this.props.getAddress(1, event)}>
-                    Forward
+                    style={styles.button}
+                    icon={<FontIcon
+                        className="material-icons" color={red500}>arrow_forward_ios</FontIcon>}
+                    onClick={(event) => this.props.setAddress(1, event)}>
                 </RaisedButton>
             </div>
         );
@@ -50,8 +63,7 @@ AddressShow.propTypes = {
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),
-    setAddress: PropTypes.func,
-    getAddress: PropTypes.func
+    setAddress: PropTypes.func
 };
 
 export default AddressShow;

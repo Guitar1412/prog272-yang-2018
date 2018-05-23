@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import '../css/App.css';
-//import AddressList from './address-list';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import styles from './elf-styles';
 import AddressShow from './AddressShow';
 import tempAddressList from './address-list';
 
-class Address extends Component {
+export default class Address extends React.Component {
     constructor(props) {
         super(props);
         this.debug = false;
@@ -50,16 +50,17 @@ class Address extends Component {
     };
 
     render() {
-        if (this.debug) { console.log('ADDRESS RENDER'); }
         return (
-            <div className="App">
-                <AddressShow address={this.state.address}
-                             setAddress={this.setAddress}
-                             setAddressPrev={this.setAddress2}/>
-            </div>
+            <View style={styles.container}>
+                <Text style={styles.textAlign}>
+                    Welcome to Expo!!
+                </Text>
+                <View className="App">
+                    <AddressShow address={this.state.address}
+                                 setAddress={this.setAddress}
+                    />
+                </View>
+            </View>
         );
     }
-
 }
-
-export default Address;

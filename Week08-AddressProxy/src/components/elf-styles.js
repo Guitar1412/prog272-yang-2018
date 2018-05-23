@@ -1,6 +1,8 @@
 export default {
     button: {
         margin: 12,
+        padding: 5,
+        backgroundColor: 'white'
     },
     exampleImageInput: {
         cursor: 'pointer',
