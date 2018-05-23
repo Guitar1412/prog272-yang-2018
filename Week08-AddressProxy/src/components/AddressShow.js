@@ -25,12 +25,12 @@ class AddressShow extends Component {
                     primary={true}
                     icon={<ActionAndroid />}
                     style={styles.button}
-                    onClick={this.props.setAddress}
+                    onClick={(event) => this.props.setAddress(1, event)}
                 />
                 <RaisedButton
                     id="setAddress"
                     primary={true}
-                    onClick={(event) => this.props.setAddress(1, event)}>
+                    onClick={(event) => this.props.getAddress(1, event)}>
                     Forward
                 </RaisedButton>
             </div>
@@ -50,7 +50,8 @@ AddressShow.propTypes = {
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),
-    setAddress: PropTypes.func
+    setAddress: PropTypes.func,
+    getAddress: PropTypes.func
 };
 
 export default AddressShow;

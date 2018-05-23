@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../css/App.css';
 //import AddressList from './address-list';
 import AddressShow from './AddressShow';
-import tempAddressList from '../address-list';
+import tempAddressList from './address-list';
 
 class Address extends Component {
     constructor(props) {
@@ -13,20 +13,17 @@ class Address extends Component {
             this.state = {
                 address: tempAddressList[this.addressIndex]
             };
-            this.log('Temp Address List:', tempAddressList);
-            this.getAddressList();
+            //this.log('Temp Address List:', tempAddressList);
+            this.getAddress();
 
-        this.state = {
-            address: addressList[this.addressIndex]
+
 
         };
-        this.debug = true;
-
-    }
+        //this.debug = true;
     getAddress = () =>{
         fetch('/address-list')
             .then((response) => response.json())
-            .then((response) => {
+            .then((addressListFromServer) => {
                 console.log(addressListFromServer);
                 this.addressList = addressListFromServer;
             })
@@ -40,7 +37,7 @@ class Address extends Component {
         }
         this.addressIndex += offset;
         this.setState ({
-            address: addressList[this.addressIndex]
+            address: this.addressList[this.addressIndex]
 
         });
         this.debug = true;

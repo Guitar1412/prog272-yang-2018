@@ -28,7 +28,7 @@ function getZip(value, char) {
     // YOU WRITE IT
     // ITS THE SAME SINGLE CALL AS GET ADDRESS, BUT INDEXES ARE DIFFERENT
     // UNCOMMENT NEXT LINE AND MODIFY IT
-    return value.substring(0, value.lastIndexOf(char) -1);
+    return value.substring(value.lastIndexOf(char) +1);
 }
 
 function getCity(value, char, len) {
@@ -58,10 +58,10 @@ readFile('govtrack-address.json')
             console.log(open);
             writeIt('firstName', json.objects[i].person.firstname);
             writeIt('lastName', json.objects[i].person.lastname);
-            writeIt('street', getAddress(json.objects[i].extra.address, 'W'));
+            writeIt('address', getAddress(json.objects[i].extra.address, 'W'));
             writeIt('city', getCity(json.objects[i].extra.address, 'W', 13));
             writeIt('state', json.objects[i].state);
-            writeIt('zip', getZip(json.objects[i].extra.address, 'W'));
+            writeIt('zip', getZip(json.objects[i].extra.address, ' '));
             writeIt('phone', json.objects[i].phone);
             writeIt('website', json.objects[i].website);
             writeIt('email', '');
