@@ -1,5 +1,5 @@
 [Service]
-ExecStart=/home/bcuser/npm/bin/npm start
+ExecStart=/usr/bin/node /home/ubuntu/bin/nrbc/bin/www
 WorkingDirectory=/home/ubuntu/bin/nrbc
 Restart=always
 StandardOutput=syslog
@@ -8,7 +8,7 @@ SyslogIdentifier=nrbc
 User=ubuntu
 Group=ubuntu
 Environment=NODE_ENV=production
-Environment=PORT=30026
 
 [Install]
 WantedBy=multi-user.target
+
