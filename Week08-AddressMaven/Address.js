@@ -20,16 +20,17 @@ export default class Address extends React.Component {
     };
 
     getAddress = () =>{
-        fetch('/address-list')
+        fetch('http://ec2-35-167-164-195.us-west-2.compute.amazonaws.com:30026/address-list')
             .then((response) => response.json())
             .then((addressListFromServer) => {
-                console.log(addressListFromServer);
+                //console.log(addressListFromServer);
                 this.addressList = addressListFromServer;
             })
             .catch((ex) => {
                 console.log(ex);
             })
     };
+
     setAddress = (offset) => {
         if(this.debug) {
             console.log('setAddress called');

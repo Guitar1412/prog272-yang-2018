@@ -2,7 +2,7 @@
   "name": "Week07-AddressNative",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:30026",
+  "proxy": "http://ec2-35-167-164-195.us-west-2.compute.amazonaws.com:30026",
   "devDependencies": {
     "react-native-scripts": "1.14.0",
     "jest-expo": "~27.0.0",

@@ -32,7 +32,7 @@ export default class Address extends React.Component {
         });
         if (this.addressIndex >= 5)
 		{
-			this.addressIdex = 1;
+			this.addressIndex = 1;
 		}
 
         this.debug = true;

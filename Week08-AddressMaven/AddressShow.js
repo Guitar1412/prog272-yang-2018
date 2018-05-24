@@ -33,22 +33,17 @@ class AddressShow extends Component {
                     <View style={styles.buttonView}>
                         <Button
                             onPress={this.props.setAddress}
-                            title="Set Address"
+                            title="Prev"
+                            color="#841584"
+                            accessibilityLabel="Learn more about this purple button"
+                            onPress={(event) => this.props.setAddress(-1, event)}
+                        />
+                        <Button
+                            onPress={this.props.setAddress}
+                            title="Next"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                             onPress={(event) => this.props.setAddress(1, event)}
-                        />
-                        <Button
-                            onPress={this.props.setAddressBack}
-                            title="Set Address Left"
-                            color="#841584"
-                            accessibilityLabel="Learn more about this purple button"
-                        />
-                        <Button
-                            onPress={this.props.setAddressNext}
-                            title="Set Address Right"
-                            color="#841584"
-                            accessibilityLabel="Learn more about this purple button"
                         />
                     </View>
                 </View>
@@ -69,9 +64,7 @@ AddressShow.propTypes = {
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),
-    setAddress: PropTypes.func,
-    setAddressBack: PropTypes.func,
-    setAddressNext: PropTypes.func
+    setAddress: PropTypes.func
 
 };
 
