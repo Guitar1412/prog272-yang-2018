@@ -66,6 +66,28 @@ describe('Address tests', function() {
             expect(wrapper.find('AddressShow').prop('address').firstName).toEqual('Tammy');
         });
     });
+
+    it('renders state of lastName after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]}/>);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').lastName).toEqual('Baldwin');
+        });
+    });
+
+    it('renders state of address after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]}/>);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').address).toEqual('709 Hart Senate Office Building');
+        });
+    });
+
+    it('renders state of city after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]}/>);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').city).toEqual('Washington DC');
+        });
+    });
+
     //
     // it.only('renders state of firstName after button click', () => {
     //     const wrapper = shallow(<Address address={addresses[0]}/>);
