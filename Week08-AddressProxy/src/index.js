@@ -10,7 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <App/>
+        <App />
     </MuiThemeProvider>,
-    document.getElementById('root'));
+    document.getElementById('root')
+);
 registerServiceWorker();

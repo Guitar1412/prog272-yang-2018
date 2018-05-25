@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import styles from './elf-styles';
 import AddressShow from './AddressShow';
 import tempAddressList from './address-list';
@@ -17,7 +17,7 @@ export default class Address extends React.Component {
         this.getAddress();
 
         this.debug = true;
-    };
+    }
 
     getAddress = () =>{
         fetch('http://ec2-35-167-164-195.us-west-2.compute.amazonaws.com:30026/address-list')
@@ -28,7 +28,7 @@ export default class Address extends React.Component {
             })
             .catch((ex) => {
                 console.log(ex);
-            })
+            });
     };
 
     setAddress = (offset) => {
@@ -58,7 +58,7 @@ export default class Address extends React.Component {
                 </Text>
                 <View className="App">
                     <AddressShow address={this.state.address}
-                                 setAddress={this.setAddress}
+                        setAddress={this.setAddress}
                     />
                 </View>
             </View>

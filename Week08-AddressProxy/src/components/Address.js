@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../css/App.css';
 //import AddressList from './address-list';
 import AddressShow from './AddressShow';
@@ -28,7 +28,6 @@ class Address extends Component {
             addressList: [{}],
             address: tempAddressList[0]
         };
-
     }
 
     componentDidMount() {
@@ -39,55 +38,54 @@ class Address extends Component {
         this.canceled = true;
     }
 
-    getAddress = () =>{
+    getAddress = () => {
         fetch('/address-list')
-            .then((response) => response.json())
-            .then((addressListFromServer) => {
+            .then(response => response.json())
+            .then(addressListFromServer => {
                 //console.log(addressListFromServer);
                 this.addressList = addressListFromServer;
 
                 if (!this.canceled) {
-                    this.setState({addressList: addressListFromServer});
-                    this.setState({index: 0});
+                    this.setState({ addressList: addressListFromServer });
+                    this.setState({ index: 0 });
                 }
             })
-            .catch((ex) => {
+            .catch(ex => {
                 console.log(ex);
-            })
+            });
     };
-    setAddress = (offset) => {
-
+    setAddress = offset => {
         let value = this.state.addressIndex + offset;
 
-        if(this.debug) {
+        if (this.debug) {
             console.log('setAddress called');
         }
         value += offset;
-        if (value > this.state.addressList.length -1){
+        if (value > this.state.addressList.length - 1) {
             value = 0;
+        } else if (value < 0) {
+            value = this.state.addressList.length - 1;
         }
-        else if (value < 0){
-            value = this.state.addressList.length -1;
-
-        }
-        this.setState({addressIndex : value});
-        this.setState ({
+        this.setState({ addressIndex: value });
+        this.setState({
             address: this.state.addressList[value]
-
         });
         this.debug = true;
     };
 
     render() {
-        if (this.debug) { console.log('ADDRESS RENDER'); }
+        if (this.debug) {
+            console.log('ADDRESS RENDER');
+        }
         return (
             <div className="App">
-                <AddressShow address={this.state.address}
-                             setAddress={this.setAddress}/>
+                <AddressShow
+                    address={this.state.address}
+                    setAddress={this.setAddress}
+                />
             </div>
         );
     }
-
 }
 
 export default Address;

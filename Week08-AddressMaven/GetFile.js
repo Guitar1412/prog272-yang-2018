@@ -21,7 +21,7 @@ class GetFile extends Component {
     render() {
         return (
             <View style={styles.addressContainer}>
-                <Text className={"App-intro"}>file: {this.state.file}</Text>
+                <Text className={'App-intro'}>file: {this.state.file}</Text>
                 <View style={styles.buttonView}>
                     <Button
                         onPress={this.getFile}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-native';
 import {Text, View} from 'react-native';
-import styles from "./elf-styles";
+import styles from './elf-styles';
 
 class Header extends Component {
 

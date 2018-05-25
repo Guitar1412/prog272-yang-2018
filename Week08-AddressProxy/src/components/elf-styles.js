@@ -12,6 +12,6 @@ export default {
         right: 0,
         left: 0,
         width: '100%',
-        opacity: 0,
-    },
+        opacity: 0
+    }
 };

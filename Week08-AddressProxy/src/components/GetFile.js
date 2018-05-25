@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import FontIcon from 'material-ui/FontIcon';
 import { red500 } from 'material-ui/styles/colors';
 import styles from './elf-styles';
@@ -14,7 +14,7 @@ class GetFile extends Component {
 
     getFile = () => {
         console.log('getFile called.');
-        this.setState({file: 'url-file.js'});
+        this.setState({ file: 'url-file.js' });
     };
 
     render() {
@@ -26,9 +26,11 @@ class GetFile extends Component {
                     label="Query Git API"
                     labelPosition="before"
                     primary={true}
-                    icon={<FontIcon
-                        className="material-icons"
-                        color={red500}>file_copy</FontIcon>}
+                    icon={
+                        <FontIcon className="material-icons" color={red500}>
+                            file_copy
+                        </FontIcon>
+                    }
                     style={styles.button}
                     onClick={this.getFile}
                 />
