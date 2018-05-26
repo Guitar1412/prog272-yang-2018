@@ -1,10 +1,12 @@
 import App from './components/App';
 import React from 'react';
-//import Route from './components/App';
+import { Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Adapter from 'enzyme-adapter-react-16';
-import { configure } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import ReactDOM from 'react-dom';
+import Address from './components/Address';
+import GetFile from './components/GetFile';
 configure({ adapter: new Adapter() });
 
 // Code omitted here
@@ -48,14 +50,16 @@ describe('Jest App Tests', function() {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it('renders to display Address link', () =>{
-    //     const wrapper = shallow(<Route/>);
-    //     expect(wrapper.find(exact path)).toEqual('/');
-    // });
+    it('renders and reads link before click', () => {
+        const wrapper = shallow (<App />);
+        const routeA = <Route exact path="/" component={Address} />;
+        expect(wrapper.contains(routeA)).toBe(true);
+    });
 
-    // it.only('renders and reads H2 text', () => {
-    //     const wrapper = shallow(<App />);
-    //     const welcome = <h2>Welcome to React</h2>;
-    //     expect(wrapper.contains(welcome)).toEqual(true);
-    // });
+    it('renders and reads link before click', () => {
+        const wrapper = shallow (<App />);
+        const routeF = <Route path="/get-file" component={GetFile} />;
+        expect(wrapper.contains(routeF)).toBe(true);
+    });
+
 });

@@ -24,10 +24,12 @@ class AddressShow extends Component {
                 <p className="App-intro">State: {this.props.address.state}</p>
                 <p className="App-intro">Zip: {this.props.address.zip}</p>
                 <p className="App-intro">Phone: {this.props.address.phone}</p>
-                <p className="App-intro">Fax: {this.props.address.fax}</p>
-                <p className="App-intro">
-                    Tollfree: {this.props.address.tollfree}
-                </p>
+                <p className="App-intro">Website: {this.props.address.website}</p>
+                <p className="App-intro">Email: {this.props.address.email}</p>
+                <p className="App-intro">Contact: {this.props.address.contact}</p>
+
+                {/*<p className="App-intro">Fax: {this.props.address.fax}</p>*/}
+                {/*<p className="App-intro">Tollfree: {this.props.address.tollfree}</p>*/}
                 {/*<button id='setAddress' onClick={this.props.setAddress}>Set Address</button>*/}
                 {/*<RaisedButton*/}
                 {/*label="Set Address"*/}
@@ -73,6 +75,9 @@ AddressShow.propTypes = {
         state: PropTypes.string,
         zip: PropTypes.string,
         phone: PropTypes.string,
+        website: PropTypes.string,
+        email:PropTypes.string,
+        contact: PropTypes.string,
         fax: PropTypes.string,
         tollfree: PropTypes.string
     }),

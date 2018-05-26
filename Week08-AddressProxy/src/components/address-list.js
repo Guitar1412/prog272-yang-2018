@@ -9,7 +9,10 @@ const addresses = [
         zip: unknown,
         phone: unknown,
         fax: unknown,
-        tollfree: unknown
+        tollfree: unknown,
+        website: unknown,
+        email: unknown,
+        contact: unknown
     },
     {
         firstName: 'Tammy',

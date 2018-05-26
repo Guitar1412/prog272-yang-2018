@@ -25,8 +25,7 @@ describe('Address tests', function() {
                                 phone: '202-224-5653',
                                 website: 'https://www.baldwin.senate.gov',
                                 email: '',
-                                contact:
-                                    'https://www.baldwin.senate.gov/feedback'
+                                contact: 'https://www.baldwin.senate.gov/feedback'
                             }
                         ];
                     }
@@ -105,15 +104,57 @@ describe('Address tests', function() {
         });
     });
 
-    //
-    // it.only('renders state of firstName after button click', () => {
-    //     const wrapper = shallow(<Address address={addresses[0]}/>);
-    //     wrapper.instance().setAddress();
-    //     setImmediate(() => {
-    //         wrapper.update();
-    //         expect(wrapper.find('AddressShow').prop('address').firstName).toEqual('Tammy');
-    //     });
-    // });
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').state).toEqual(
+                'WI'
+            );
+        });
+    });
 
-    // YOU WRITE TESTS FOR THE OTHER PROPERTIES SUCH AS LASTNAME, CITY, ETC...
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').zip).toEqual(
+                '20510'
+            );
+        });
+    });
+
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').phone).toEqual(
+                '202-224-5653'
+            );
+        });
+    });
+
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').website).toEqual(
+                'https://www.baldwin.senate.gov'
+            );
+        });
+    });
+
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').email).toEqual(
+                ''
+            );
+        });
+    });
+
+    it('renders state of state after button click', () => {
+        const wrapper = shallow(<Address address={addresses[1]} />);
+        afterClickFieldTest(wrapper, () => {
+            expect(wrapper.find('AddressShow').prop('address').contact).toEqual(
+                'https://www.baldwin.senate.gov/feedback'
+            );
+        });
+    });
 });

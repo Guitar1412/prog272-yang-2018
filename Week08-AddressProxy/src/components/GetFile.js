@@ -23,6 +23,7 @@ class GetFile extends Component {
                 <p className="App-intro">File: {this.state.file}</p>
                 {/*<button id='getFile' onClick={this.getFile}>Get File</button>*/}
                 <RaisedButton
+                    id="getFile"
                     label="Query Git API"
                     labelPosition="before"
                     primary={true}
