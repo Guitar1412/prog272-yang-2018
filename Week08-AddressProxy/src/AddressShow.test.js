@@ -1,10 +1,11 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import AddressShow from './components/AddressShow';
 import AddressList from './components/address-list';
-//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Adapter from 'enzyme-adapter-react-16';
 import { configure, shallow } from 'enzyme';
+import addresses from './components/address-list'
 //import Address from './components/Address';
 configure({ adapter: new Adapter() });
 
@@ -71,11 +72,11 @@ describe('AddressShow Shallow Suite', function() {
         getIndex(wrapper, index, talkToMe);
     };
 
-    // it.only('renders without crashing', () => {
-    //     const div = document.createElement('div');
-    //     ReactDOM.render(<MuiThemeProvider><AddressShow/></MuiThemeProvider>, div);
-    //     ReactDOM.unmountComponentAtNode(div);
-    // });
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MuiThemeProvider><AddressShow address={addresses[0]}/></MuiThemeProvider>, div);
+        ReactDOM.unmountComponentAtNode(div);
+    });
 
     it('renders and displays the first name', () => {
         defaultFieldTest('First Name: unknown', 0);
