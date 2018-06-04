@@ -123,7 +123,7 @@ class Header extends Component {
                             <MenuIcon/>
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex}>
-                            GitExplorer
+                            Address Maven
                         </Typography>
                     </Toolbar>
                 </AppBar>
