@@ -29,8 +29,8 @@ class App extends Component {
 
     componentDidMount() {
         this.db = new PouchDB('address');
-        //this.remoteCouch = 'http://168.156.46.129:5984/address';
-        this.remoteCouch = false;
+        this.remoteCouch = 'http://10.0.0.113:5984/address';
+        //this.remoteCouch = false;
         this.syncDom = document.getElementById('sync-wrapper');
 
         this.db.changes({
@@ -39,24 +39,24 @@ class App extends Component {
         }).on('change', this.showAddress);
     }
 
-    addAddress = (data) => {
-        const indexValue = this.state.addressIndex + 1;
-        this.setState({addressIndex: indexValue});
-        const address = {
-            _id: new Date().toISOString(),
-            firstName: data.firstName,
-            lastName: data.lastName,
-            completed: false
-        };
-
-        this.db.put(address, function callback(err, result) {
-            if (!err) {
-                console.log('Successfully posted a r!');
-            }
-        });
-        this.state.ids.push(address._id);
-        //this.state.firstName.push(address.firstName);
-    };
+    // addAddress = (data) => {
+    //     const indexValue = this.state.addressIndex + 1;
+    //     this.setState({addressIndex: indexValue});
+    //     const address = {
+    //         _id: new Date().toISOString(),
+    //         firstName: data.firstName,
+    //         lastName: data.lastName,
+    //         completed: false
+    //     };
+    //
+    //     this.db.put(address, function callback(err, result) {
+    //         if (!err) {
+    //             console.log('Successfully posted a r!');
+    //         }
+    //     });
+    //     this.state.ids.push(address._id);
+    //     //this.state.firstName.push(address.firstName);
+    // };
 
     showAddress = () => {
         const that = this;
@@ -71,6 +71,24 @@ class App extends Component {
                 that.setState({ids: ids});
             }
         });
+    };
+
+    addAddressReal = () => {
+        const indexValue = this.state.addressIndex + 1;
+        this.setState({addressIndex: indexValue});
+        const address = {
+            _id: new Date().toISOString(),
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            completed: false
+        };
+        this.db.put(address, function callback(err, result) {
+            if (!err) {
+                console.log('Successfully posted a r!');
+            }
+        });
+        this.state.ids.push(address._id);
+        // You call this.setState and set the new ids value.
     };
 
     handleFirst = event => {
@@ -128,18 +146,26 @@ class App extends Component {
 
                 </div>
 
-                <Button
-                    color='secondary'
-                    variant='raised'
-                    onClick={e => this.addAddress({firstName: 'foo', lastName: 'bar'}, e)}
-                >
-                    Insert FooBar
-                </Button>
+                {/*<Button*/}
+                    {/*color='secondary'*/}
+                    {/*variant='raised'*/}
+                    {/*onClick={e => this.addAddress({firstName: 'foo', lastName: 'bar'}, e)}*/}
+                {/*>*/}
+                    {/*Insert FooBar*/}
+                {/*</Button>*/}
 
                 <Button
                     color='secondary'
                     variant='raised'
                     onClick={this.showAddress}
+                >
+                    Add Address
+                </Button>
+
+                <Button
+                    color='secondary'
+                    variant='raised'
+                    onClick={this.addAddressReal}
                 >
                     Show
                 </Button>
