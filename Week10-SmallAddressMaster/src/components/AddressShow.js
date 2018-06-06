@@ -39,6 +39,29 @@ class AddressShow extends Component {
         }
     }
 
+    setEdits = (name, event) => {
+        var data = this.props.name;
+        data[name] = event.target.value;
+        this.setState({edits: data});
+    };
+
+    addressEdit = address => {
+        console.log(address);
+
+        if (!address) {
+            return this.setState({editOpen: false});
+        }
+
+        this.setState({
+            edits: address,
+            editOpen: false
+        });
+    };
+
+    save = () => {
+        this.props.save(this.state.edits);
+    };
+
     render() {
         const {classes} = this.props;
 
