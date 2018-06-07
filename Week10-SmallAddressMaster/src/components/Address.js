@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 import PouchDB from 'pouchdb';
-import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import AddressShow from './AddressShow';
@@ -34,7 +29,7 @@ class Address extends Component {
 
     componentDidMount() {
         this.db = new PouchDB('address');
-        this.remoteCouch = 'http://10.0.0.113:5984/address';
+        this.remoteCouch = 'http://168.156.46.187:5984/address';
         //this.remoteCouch = false;
         this.syncDom = document.getElementById('sync-wrapper');
 

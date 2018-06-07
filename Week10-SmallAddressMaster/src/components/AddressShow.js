@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
-import PouchDB from 'pouchdb';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
+import AddressEdit from './AddressEdit';
+
 const styles = theme => ({
     button: {
         margin: theme.spacing.unit
@@ -63,13 +63,27 @@ class AddressShow extends Component {
     };
 
     render() {
+
         const {classes} = this.props;
 
+        const editDialog = this.state.editOpen ? (
+            <AddressEdit
+                address={this.props.name}
+                open={this.state.editOpen}
+                addressEdit={this.addressEdit}
+            />
+        ) : (
+            <div/>
+        );
+
         return (
+
             <div className={classes.container}>
                 <Paper className={classes.rootBar}>
+
                     <p>{this.props.name.firstName}</p>
                     <p>{this.props.name.lastName}</p>
+
                     <Button
                         color="secondary"
                         variant="raised"
@@ -85,6 +99,7 @@ class AddressShow extends Component {
                     >
                         Back
                     </Button>
+
                     <Button
                         color="secondary"
                         variant="raised"
@@ -92,7 +107,9 @@ class AddressShow extends Component {
                     >
                         Forward
                     </Button>
+
                     <div>
+
                         <Button
                             color="secondary"
                             variant="raised"
@@ -100,6 +117,9 @@ class AddressShow extends Component {
                         >
                             Edit
                         </Button>
+
+                        {editDialog}
+
                         <Button
                             color="secondary"
                             variant="raised"
@@ -107,6 +127,7 @@ class AddressShow extends Component {
                         >
                             Save
                         </Button>
+
                         <Button
                             color="secondary"
                             variant="raised"
@@ -116,6 +137,7 @@ class AddressShow extends Component {
                         >
                             Delete
                         </Button>
+
                     </div>
                 </Paper>
             </div>

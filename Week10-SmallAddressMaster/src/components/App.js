@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
-import PouchDB from 'pouchdb';
-import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
 import Address from './Address';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';

@@ -7,13 +7,13 @@ class DataManager {
         PouchDB.plugin(PouchdbFind);
         this.addressList = null;
         this.addressIndex = 0;
-        this.DATABASE_NAME = 'small-address';
+        this.DATABASE_NAME = 'address-list-yang';
     }
 
     init = () => {
         console.log('DataManager Init');
         this.db = new PouchDB(this.DATABASE_NAME);
-        this.remoteCouch = 'http://10.0.0.113:5984/' + this.DATABASE_NAME;
+        this.remoteCouch = 'http://168.156.46.187:5984/' + this.DATABASE_NAME;
         return this.db;
     };
 
