@@ -37,7 +37,7 @@ class AddressShow extends Component {
                 lastName: 'unknown'
             }
         }
-    };
+    }
 
     setEdits = (name, event) => {
         var data = this.props.name;

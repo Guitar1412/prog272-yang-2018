@@ -102,16 +102,16 @@ class InitializeDatabase extends Component {
                         Database Tools
                     </Typography>
 
-                    <Typography variant="body1" gutterBottom align="center">
+                    <Typography variant="body1" gutterBottom align="left">
                         The tools found here would probably not be part of a
                         production system. They are designed to help us understand
                         how our database works.
                     </Typography>
-                    <Typography variant="body1" gutterBottom align="center">If you clear the data in storage then refresh
+                    <Typography variant="body1" gutterBottom align="left">If you clear the data in storage then refresh
                         the app before
                         trying to do anything else.</Typography>
                     <Typography variant="headline">Enter Sync Mode</Typography>
-                    <Typography variant="body1" gutterBottom align="center">Use the sync button when you are connected to
+                    <Typography variant="body1" gutterBottom align="left">Use the sync button when you are connected to
                         the Internet.
                         By default, you are not in sync mode. Don't press this
                         button if you are offline.</Typography>
@@ -124,7 +124,7 @@ class InitializeDatabase extends Component {
                     </Button>
 
                     <Typography variant="headline">Load Data</Typography>
-                    <Typography variant="body1" gutterBottom align="center">Use these buttons, pressing them in the order
+                    <Typography variant="body1" gutterBottom align="left">Use these buttons, pressing them in the order
                         shown, to load our
                         address-list and convert it to PouchDb Format. You should need
                         to do this only once, or only after you clear Storage using the

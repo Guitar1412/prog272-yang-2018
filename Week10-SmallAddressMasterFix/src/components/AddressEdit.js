@@ -43,15 +43,14 @@ export default class AddressEdit extends React.Component {
                     </DialogTitle>
 
                     <DialogContent>
-                        <DialogContent>
-                            <DialogContentText>
-                                Fill in the fields of the address record.
-                            </DialogContentText>
+
+                        <DialogContentText>
                             <AddressEditFields
                                 address={this.props.address}
-                                setAddress={this.addressChangedByUser}
+                                addressChangedByUser={this.addressChangedByUser}
                             />
-                        </DialogContent>
+                        </DialogContentText>
+
                         <DialogActions>
                             <Button onClick={this.userCanceledDialog} color="primary">
                                 Cancel
@@ -60,6 +59,7 @@ export default class AddressEdit extends React.Component {
                                 Ok
                             </Button>
                         </DialogActions>
+
                     </DialogContent>
                 </Dialog>
             </div>

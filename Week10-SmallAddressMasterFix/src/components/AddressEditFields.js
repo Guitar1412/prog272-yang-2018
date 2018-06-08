@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 
-class AddressEditFields  extends Component {
+class AddressFields  extends Component {
     render() {
         return (
             <div>
@@ -31,7 +31,7 @@ class AddressEditFields  extends Component {
     }
 }
 
-AddressEditFields .propTypes = {
+AddressFields .propTypes = {
     addressChangedByUser: PropTypes.func,
     address: PropTypes.shape({
         firstName: PropTypes.string,
@@ -39,4 +39,4 @@ AddressEditFields .propTypes = {
     })
 };
 
-export default AddressEditFields;
+export default AddressFields;
