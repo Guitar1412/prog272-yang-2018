@@ -48,6 +48,9 @@ export default class AddressEdit extends React.Component {
                                 Fill in the fields of the address record.
                             </DialogContentText>
                             <AddressEditFields
+                                // address={this.props.address}
+                                // setAddress={this.setAddress}
+
                                 address={this.props.address}
                                 setAddress={this.addressChangedByUser}
                             />

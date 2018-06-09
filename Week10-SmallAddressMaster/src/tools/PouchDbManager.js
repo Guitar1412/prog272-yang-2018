@@ -14,6 +14,7 @@ class DataManager {
         console.log('DataManager Init');
         this.db = new PouchDB(this.DATABASE_NAME);
         this.remoteCouch = 'http://10.0.0.113:5984/' + this.DATABASE_NAME;
+
         return this.db;
     };
 
@@ -22,6 +23,7 @@ class DataManager {
             .destroy()
             .then(response => {
                 console.log(response);
+                window.location.reload();
             })
             .catch(function(err) {
                 console.log(err);
