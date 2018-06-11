@@ -7,49 +7,36 @@ import AddressShow from './AddressShow';
 
 const styles = theme => ({
     FormControl: {
-        marginLeft: theme.spacing.unit
+        marginLeft: theme.spacing.unit,
     }
 });
 
 class Address extends Component {
+
     constructor(props) {
         super(props);
         this.canceled = false;
         this.state = {
             editOpen: false,
             namesIndex: 0,
-            names: [
-                {
-                    _id: 'ID',
-                    firstName: 'First Name',
-                    lastName: 'Last Name',
-                    address: 'Address',
-                    city: 'City',
-                    state: 'State',
-                    zip: 'Zip',
-                    phone: 'Phone',
-                    fax: 'Fax',
-                    tollfree: 'Toll-free',
-                    website: 'Website',
-                    email: 'Email',
-                    contact: 'Contact'
-                }
-            ]
+            names: [{
+                _id: 'unknown',
+                firstName: 'unknown',
+                lastName: 'unknown'
+            }]
         };
     }
 
     componentDidMount() {
         this.db = new PouchDB('address');
-        this.remoteCouch = 'http://10.12.158.86:5984/address';
+        this.remoteCouch = 'http://10.0.0.113:5984/address';
         //this.remoteCouch = false;
         this.syncDom = document.getElementById('sync-wrapper');
 
-        this.db
-            .changes({
-                since: 'now',
-                live: true
-            })
-            .on('change', this.showAddress);
+        this.db.changes({
+            since: 'now',
+            live: true
+        }).on('change', this.showAddress);
     }
 
     showAddress = () => {
@@ -66,17 +53,7 @@ class Address extends Component {
                         _id: address._id,
                         _rev: address._rev,
                         firstName: address.firstName,
-                        lastName: address.lastName,
-                        address: address.address,
-                        city: address.city,
-                        state: address.state,
-                        zip: address.zip,
-                        phone: address.phone,
-                        fax: address.fax,
-                        tollfree: address.tollfree,
-                        website: address.website,
-                        email: address.email,
-                        contact: address.contact
+                        lastName: address.lastName
                     };
                 });
                 if (!this.canceled) {
@@ -85,14 +62,14 @@ class Address extends Component {
             });
     };
 
-    setAddress = offset => {
+    setAddress = (offset) => {
         const value = this.state.namesIndex + offset;
         if (value >= 0 && value <= this.state.names.length - 1) {
             this.setState({ namesIndex: value, open: this.state.editOpen });
         }
     };
 
-    save = name => {
+    save = (name) => {
         console.log(name);
         this.props.dataManager
             .save(name)
@@ -104,7 +81,7 @@ class Address extends Component {
             });
     };
 
-    delete = name => {
+    delete = (name) => {
         this.props.dataManager
             .delete(name._id)
             .then(function(result) {
@@ -116,7 +93,7 @@ class Address extends Component {
     };
 
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
         return (
             <AddressShow
                 name={this.state.names[this.state.namesIndex]}

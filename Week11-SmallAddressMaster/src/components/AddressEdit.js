@@ -7,7 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import AddressEditFields from './AddressEditFields';
 import addressList from '../address-list';
-
+import PropTypes from 'prop-types';
 //const styles = {};
 
 export default class AddressEdit extends React.Component {
@@ -43,15 +43,15 @@ export default class AddressEdit extends React.Component {
                     </DialogTitle>
 
                     <DialogContent>
-
-                        <DialogContentText>
-                            Fill in the fields of the address record.
-                        </DialogContentText>
-                        <AddressEditFields
-                            address={this.props.address}
-                            addressChangedByUser={this.addressChangedByUser}
-                        />
-
+                        <DialogContent>
+                            <DialogContentText>
+                                Fill in the fields of the address record.
+                            </DialogContentText>
+                            <AddressEditFields
+                                address={this.props.address}
+                                setAddress={this.addressChangedByUser}
+                            />
+                        </DialogContent>
                         <DialogActions>
                             <Button onClick={this.userCanceledDialog} color="primary">
                                 Cancel
@@ -60,10 +60,21 @@ export default class AddressEdit extends React.Component {
                                 Ok
                             </Button>
                         </DialogActions>
-
                     </DialogContent>
                 </Dialog>
             </div>
         );
     }
+}
+
+AddressEdit.propTypes = {
+    addressChangedByUser: PropTypes.func,
+    userClosedDialogNormal: PropTypes.func,
+    userCanceledDialog: PropTypes.func,
+    addressEdit: PropTypes.func,
+    address: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string
+    }),
+    open: PropTypes.bool
 }

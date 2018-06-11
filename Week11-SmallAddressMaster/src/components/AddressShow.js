@@ -22,43 +22,34 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 3,
         marginLeft: theme.spacing.unit * 3,
         marginRight: theme.spacing.unit * 3
-    })
+    }),
 });
 
 class AddressShow extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             editOpen: false,
             edits: {
-                _id: 'ID',
-                firstName: 'First Name',
-                lastName: 'Last Name',
-                address: 'Address',
-                city: 'City',
-                state: 'State',
-                zip: 'Zip',
-                phone: 'Phone',
-                fax: 'Fax',
-                tollfree: 'Toll-free',
-                website: 'Website',
-                email: 'Email',
-                contact: 'Contact'
+                _id: 'unknown',
+                firstName: 'unknown',
+                lastName: 'unknown'
             }
-        };
-    }
+        }
+    };
 
     setEdits = (name, event) => {
         var data = this.props.name;
         data[name] = event.target.value;
-        this.setState({ edits: data });
+        this.setState({edits: data});
     };
 
     addressEdit = address => {
         console.log(address);
 
         if (!address) {
-            return this.setState({ editOpen: false });
+            return this.setState({editOpen: false});
         }
 
         this.setState({
@@ -72,7 +63,8 @@ class AddressShow extends Component {
     };
 
     render() {
-        const { classes } = this.props;
+
+        const {classes} = this.props;
 
         const editDialog = this.state.editOpen ? (
             <AddressEdit
@@ -81,25 +73,16 @@ class AddressShow extends Component {
                 addressEdit={this.addressEdit}
             />
         ) : (
-            <div />
+            <div/>
         );
 
         return (
+
             <div className={classes.container}>
                 <Paper className={classes.rootBar}>
-                    <p>{this.props.name._id}</p>
+
                     <p>{this.props.name.firstName}</p>
                     <p>{this.props.name.lastName}</p>
-                    <p>{this.props.name.address}</p>
-                    <p>{this.props.name.city}</p>
-                    <p>{this.props.name.state}</p>
-                    <p>{this.props.name.zip}</p>
-                    <p>{this.props.name.phone}</p>
-                    <p>{this.props.name.fax}</p>
-                    <p>{this.props.name.tollfree}</p>
-                    <p>{this.props.name.website}</p>
-                    <p>{this.props.name.email}</p>
-                    <p>{this.props.name.contact}</p>
 
                     <Button
                         color="secondary"
@@ -126,10 +109,11 @@ class AddressShow extends Component {
                     </Button>
 
                     <div>
+
                         <Button
                             color="secondary"
                             variant="raised"
-                            onClick={() => this.setState({ editOpen: true })}
+                            onClick={() => this.setState({editOpen: true})}
                         >
                             Edit
                         </Button>
@@ -153,6 +137,7 @@ class AddressShow extends Component {
                         >
                             Delete
                         </Button>
+
                     </div>
                 </Paper>
             </div>
