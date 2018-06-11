@@ -16,12 +16,13 @@ const styles = theme => ({
 });
 
 class App extends Component {
+
     componentDidMount() {
         this.db = dataManager.init();
     }
 
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
         return (
             <BrowserRouter>
                 <div className="App">
@@ -47,6 +48,8 @@ class App extends Component {
                 </div>
             </BrowserRouter>
         );
+
+
     }
 }
 App.propTypes = {

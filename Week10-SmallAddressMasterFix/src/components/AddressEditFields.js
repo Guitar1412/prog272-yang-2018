@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 
@@ -9,25 +9,21 @@ class AddressEditFields extends Component {
                 <TextField
                     autoFocus
                     margin="dense"
-                    id="firstName"
+                    id="name"
                     label="First Name"
                     type="string"
                     value={this.props.address.firstName}
-                    onChange={e =>
-                        this.props.addressChangedByUser('firstName', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('firstName', e)}
                     fullWidth
                 />
                 <TextField
                     autoFocus
                     margin="dense"
-                    id="lastName"
+                    id="name"
                     label="Last Name"
                     type="string"
                     value={this.props.address.lastName}
-                    onChange={e =>
-                        this.props.addressChangedByUser('lastName', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('lastName', e)}
                     fullWidth
                 />
             </div>

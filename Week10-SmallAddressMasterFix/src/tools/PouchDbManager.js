@@ -7,14 +7,13 @@ class DataManager {
         PouchDB.plugin(PouchdbFind);
         this.addressList = null;
         this.addressIndex = 0;
-        this.DATABASE_NAME = 'address-list-yang';
+        this.DATABASE_NAME = 'small-address';
     }
 
     init = () => {
         console.log('DataManager Init');
         this.db = new PouchDB(this.DATABASE_NAME);
         this.remoteCouch = 'http://10.0.0.113:5984/' + this.DATABASE_NAME;
-
         return this.db;
     };
 
@@ -23,7 +22,6 @@ class DataManager {
             .destroy()
             .then(response => {
                 console.log(response);
-                window.location.reload();
             })
             .catch(function(err) {
                 console.log(err);
@@ -49,7 +47,7 @@ class DataManager {
     createIndex = () => {
         this.db
             .createIndex({
-                index: { fields: ['lastName'] }
+                index: {fields: ['lastName']}
             })
             .then(function(result) {
                 console.log(result);
@@ -70,13 +68,12 @@ class DataManager {
 
     // https://stackoverflow.com/a/2117523/253576
     getGuid = () => {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(
-            c
-        ) {
-            var r = (Math.random() * 16) | 0,
-                v = c === 'x' ? r : (r & 0x3) | 0x8;
-            return v.toString(16);
-        });
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+            .replace(/[xy]/g, function(c) {
+                var r = (Math.random() * 16) | 0,
+                    v = c === 'x' ? r : (r & 0x3) | 0x8;
+                return v.toString(16);
+            });
     };
 
     addAddress = data => {
@@ -84,13 +81,11 @@ class DataManager {
             _id: this.getGuid(), // new Date().toISOString(),
             firstName: data.firstName,
             lastName: data.lastName,
-            address: data.address,
+            street: data.street,
             city: data.city,
             state: data.state,
             zip: data.zip,
             phone: data.phone,
-            fax: data.fax,
-            tollfree: data.tollfree,
             website: data.website,
             email: data.email,
             contact: data.contact
@@ -136,7 +131,7 @@ class DataManager {
 
     sync = () => {
         console.log('syncing');
-        const opts = { live: true };
+        const opts = {live: true};
 
         this.db.replicate
             .to(this.remoteCouch, opts)

@@ -18,8 +18,9 @@ const styles = {
     },
     flex: {
         flex: 1
-    }
+    },
 };
+
 
 class Header extends Component {
     constructor(props) {
@@ -42,7 +43,9 @@ class Header extends Component {
         );
         return (
             <div>
-                <AppBar position="static">
+                <AppBar
+                    position="static"
+                >
                     <Toolbar>
                         <IconButton
                             className={classes.menuButton}
@@ -50,13 +53,9 @@ class Header extends Component {
                             aria-label="Menu"
                             onClick={this.handleToggle}
                         >
-                            <MenuIcon />
+                            <MenuIcon/>
                         </IconButton>
-                        <Typography
-                            variant="title"
-                            color="inherit"
-                            className={classes.flex}
-                        >
+                        <Typography variant="title" color="inherit" className={classes.flex}>
                             Address Maven
                         </Typography>
                     </Toolbar>
@@ -70,6 +69,7 @@ class Header extends Component {
                         {sideList}
                     </div>
                 </Drawer>
+
             </div>
         );
     }

@@ -37,6 +37,7 @@ export default class AddressEdit extends React.Component {
                     onClose={this.userClosedDialogNormal}
                     aria-labelledby="form-dialog-title"
                 >
+
                     <DialogTitle id="form-dialog-title">
                         Edit Address
                     </DialogTitle>
@@ -55,16 +56,10 @@ export default class AddressEdit extends React.Component {
                             />
                         </DialogContent>
                         <DialogActions>
-                            <Button
-                                onClick={this.userCanceledDialog}
-                                color="primary"
-                            >
+                            <Button onClick={this.userCanceledDialog} color="primary">
                                 Cancel
                             </Button>
-                            <Button
-                                onClick={this.userClosedDialogNormal}
-                                color="primary"
-                            >
+                            <Button onClick={this.userClosedDialogNormal} color="primary">
                                 Ok
                             </Button>
                         </DialogActions>

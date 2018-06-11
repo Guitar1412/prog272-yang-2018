@@ -866,7 +866,7 @@
 	{
 		"firstName": "Robert",
 		"lastName": "Aderholt",
-		"address": "235 Cannon House Office Building;",
+		"address": "235 Cannon House Office Building",
 		"city": "Washington DC",
 		"state": "AL",
 		"zip": "20515-0104",
@@ -878,7 +878,7 @@
 	{
 		"firstName": "Joe",
 		"lastName": "Barton",
-		"address": "2107 Rayburn House Office Building;",
+		"address": "2107 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "TX",
 		"zip": "20515-4306",
@@ -890,7 +890,7 @@
 	{
 		"firstName": "Rob",
 		"lastName": "Bishop",
-		"address": "123 Cannon House Office Building;",
+		"address": "123 Cannon House Office Building",
 		"city": "Washington DC",
 		"state": "UT",
 		"zip": "20515-4401",
@@ -902,7 +902,7 @@
 	{
 		"firstName": "Sanford",
 		"lastName": "Bishop",
-		"address": "2407 Rayburn House Office Building;",
+		"address": "2407 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "GA",
 		"zip": "20515-1002",
@@ -914,7 +914,7 @@
 	{
 		"firstName": "Marsha",
 		"lastName": "Blackburn",
-		"address": "2266 Rayburn House Office Building;",
+		"address": "2266 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "TN",
 		"zip": "20515-4207",
@@ -926,7 +926,7 @@
 	{
 		"firstName": "Earl",
 		"lastName": "Blumenauer",
-		"address": "1111 Longworth House Office Building;",
+		"address": "1111 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "OR",
 		"zip": "20515-3703",
@@ -962,7 +962,7 @@
 	{
 		"firstName": "Madeleine",
 		"lastName": "Bordallo",
-		"address": "2441 Rayburn House Office Building;",
+		"address": "2441 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "GU",
 		"zip": "20515-5301",
@@ -974,7 +974,7 @@
 	{
 		"firstName": "Kevin",
 		"lastName": "Brady",
-		"address": "1011 Longworth House Office Building;",
+		"address": "1011 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "TX",
 		"zip": "20515-4308",
@@ -986,7 +986,7 @@
 	{
 		"firstName": "Robert",
 		"lastName": "Brady",
-		"address": "2004 Rayburn House Office Building;",
+		"address": "2004 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "PA",
 		"zip": "20515-3801",
@@ -998,7 +998,7 @@
 	{
 		"firstName": "Michael",
 		"lastName": "Burgess",
-		"address": "2336 Rayburn House Office Building;",
+		"address": "2336 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "TX",
 		"zip": "20515-4326",
@@ -1022,7 +1022,7 @@
 	{
 		"firstName": "Ken",
 		"lastName": "Calvert",
-		"address": "2205 Rayburn House Office Building;",
+		"address": "2205 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "CA",
 		"zip": "20515-0542",
@@ -1034,7 +1034,7 @@
 	{
 		"firstName": "Michael",
 		"lastName": "Capuano",
-		"address": "1414 Longworth House Office Building;",
+		"address": "1414 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "MA",
 		"zip": "20515-2107",
@@ -1046,7 +1046,7 @@
 	{
 		"firstName": "John",
 		"lastName": "Carter",
-		"address": "2110 Rayburn House Office Building;",
+		"address": "2110 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "TX",
 		"zip": "20515-4331",
@@ -1058,7 +1058,7 @@
 	{
 		"firstName": "Steve",
 		"lastName": "Chabot",
-		"address": "2371 Rayburn House Office Building;",
+		"address": "2371 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "OH",
 		"zip": "20515-3501",
@@ -1070,7 +1070,7 @@
 	{
 		"firstName": "Wm.",
 		"lastName": "Clay",
-		"address": "2428 Rayburn House Office Building;",
+		"address": "2428 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "MO",
 		"zip": "20515-2501",
@@ -1082,7 +1082,7 @@
 	{
 		"firstName": "James",
 		"lastName": "Clyburn",
-		"address": "242 Cannon House Office Building;",
+		"address": "242 Cannon House Office Building",
 		"city": "Washington DC",
 		"state": "SC",
 		"zip": "20515-4006",
@@ -1094,7 +1094,7 @@
 	{
 		"firstName": "Tom",
 		"lastName": "Cole",
-		"address": "2467 Rayburn House Office Building;",
+		"address": "2467 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "OK",
 		"zip": "20515-3604",
@@ -1106,7 +1106,7 @@
 	{
 		"firstName": "Jim",
 		"lastName": "Cooper",
-		"address": "1536 Longworth House Office Building;",
+		"address": "1536 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "TN",
 		"zip": "20515-4205",
@@ -1118,7 +1118,7 @@
 	{
 		"firstName": "Joseph",
 		"lastName": "Crowley",
-		"address": "1035 Longworth House Office Building;",
+		"address": "1035 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "NY",
 		"zip": "20515-3214",
@@ -1130,7 +1130,7 @@
 	{
 		"firstName": "John",
 		"lastName": "Culberson",
-		"address": "2161 Rayburn House Office Building;",
+		"address": "2161 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "TX",
 		"zip": "20515-4307",
@@ -1142,7 +1142,7 @@
 	{
 		"firstName": "Elijah",
 		"lastName": "Cummings",
-		"address": "2163 Rayburn House Office Building;",
+		"address": "2163 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "MD",
 		"zip": "20515-2007",
@@ -1154,7 +1154,7 @@
 	{
 		"firstName": "Danny",
 		"lastName": "Davis",
-		"address": "2159 Rayburn House Office Building;",
+		"address": "2159 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "IL",
 		"zip": "20515-1307",
@@ -1166,7 +1166,7 @@
 	{
 		"firstName": "Susan",
 		"lastName": "Davis",
-		"address": "1214 Longworth House Office Building;",
+		"address": "1214 Longworth House Office Building",
 		"city": "Washington DC",
 		"state": "CA",
 		"zip": "20515-0553",
@@ -1178,7 +1178,7 @@
 	{
 		"firstName": "Peter",
 		"lastName": "DeFazio",
-		"address": "2134 Rayburn House Office Building;",
+		"address": "2134 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "OR",
 		"zip": "20515-3704",
@@ -1190,7 +1190,7 @@
 	{
 		"firstName": "Diana",
 		"lastName": "DeGette",
-		"address": "2111 Rayburn House Office Building;",
+		"address": "2111 Rayburn House Office Building",
 		"city": "Washington DC",
 		"state": "CO",
 		"zip": "20515-0601",

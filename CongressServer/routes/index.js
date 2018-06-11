@@ -4,7 +4,7 @@ const fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) { 'use strict';
-  res.render('index', { title: 'CongressServer' });
+    res.render('index', { title: 'CongressServer' });
 });
 
 function readFile(fileName) {
