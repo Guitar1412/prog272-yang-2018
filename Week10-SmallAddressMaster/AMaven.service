@@ -1,0 +1,17 @@
+[Unit]
+Description=Address Maven
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/ubuntu/bin/AMaven
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=AMaven
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+Environment=PORT=30029
+
+[Install]
+WantedBy=multi-user.target

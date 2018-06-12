@@ -1,0 +1,14 @@
+[Service]
+ExecStart=/usr/bin/node /home/ubuntu/bin/adn/bin/www
+WorkingDirectory=/home/ubuntu/bin/adn
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=adn
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+Environment=PORT=30026
+
+[Install]
+WantedBy=multi-user.target

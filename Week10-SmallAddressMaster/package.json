@@ -2,7 +2,7 @@
   "name": "week09-smalladdresscouchfixed",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:30026",
+  "proxy": "http://ec2-35-167-164-195.us-west-2.compute.amazonaws.com:30026",
   "dependencies": {
     "@material-ui/core": "^1.1.0",
     "@material-ui/icons": "^1.1.0",
@@ -18,5 +18,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-test-renderer": "^16.4.0"
   }
 }
