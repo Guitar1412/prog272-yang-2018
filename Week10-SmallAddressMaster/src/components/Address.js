@@ -40,7 +40,7 @@ class Address extends Component {
 
     componentDidMount() {
         this.db = new PouchDB('address');
-        this.remoteCouch = 'http://10.12.158.86:5984/address';
+        this.remoteCouch = 'http://10.12.207.65:5984/address';
         //this.remoteCouch = false;
         this.syncDom = document.getElementById('sync-wrapper');
 
