@@ -217,4 +217,8 @@ describe('Address tests', function() {
             );
         });
     });
+
+    it('renders and displays the default first name from FakeData', () => {
+        expect(wrapper.state().address.firstName).toEqual('Patty');
+    });
 });
