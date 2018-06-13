@@ -1,0 +1,14 @@
+Service]
+ExecStart=/usr/bin/node /home/ubuntu/bin/nrbc/bin/www
+WorkingDirectory=/home/ubuntu/bin/nrbc
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nrbc
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+
