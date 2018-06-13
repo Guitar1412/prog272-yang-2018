@@ -87,7 +87,7 @@ class AddressShow extends Component {
         return (
             <div className={classes.container}>
                 <Paper className={classes.rootBar}>
-                    <p>{this.props.name._id}</p>
+                    {/*<p>{this.props.name._id}</p>*/}
                     <p>{this.props.name.firstName}</p>
                     <p>{this.props.name.lastName}</p>
                     <p>{this.props.name.address}</p>
