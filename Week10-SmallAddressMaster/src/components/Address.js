@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import '../App.css';
 import PouchDB from 'pouchdb';
-import { withStyles } from '@material-ui/core/styles';
+//import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import AddressShow from './AddressShow';
 
-const styles = theme => ({
-    FormControl: {
-        marginLeft: theme.spacing.unit
-    }
-});
+// const styles = theme => ({
+//     FormControl: {
+//         marginLeft: theme.spacing.unit
+//     }
+// });
 
 class Address extends Component {
     constructor(props) {
@@ -51,6 +51,15 @@ class Address extends Component {
             })
             .on('change', this.showAddress);
     }
+
+    componentWillUnmount() {
+        this.canceled = true;
+    }
+
+    watcher = event => {
+        console.log('Watch Change', event);
+        this.showAddress();
+    };
 
     showAddress = () => {
         const that = this;
@@ -115,8 +124,26 @@ class Address extends Component {
             });
     };
 
+    addressEdit = address => {
+        console.log(address);
+
+        if (!address) {
+            return this.setState({editOpen: false});
+        }
+
+        this.setState({
+            edits: address,
+            editOpen: false
+        });
+    };
+
+    setEdits = (name, event) => {
+        var data = this.props.name;
+        data[name] = event.target.value;
+        this.setState({edits: data});
+    };
+
     render() {
-        const { classes } = this.props;
         return (
             <AddressShow
                 name={this.state.names[this.state.namesIndex]}
@@ -129,6 +156,15 @@ class Address extends Component {
     }
 }
 Address.propTypes = {
-    classes: PropTypes.object.isRequired
+    dataManager: PropTypes.shape({
+        watchChanges: PropTypes.func,
+        save: PropTypes.func,
+        delete: PropTypes.func
+    }),
+    name: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string
+    }),
+    open:PropTypes.bool
 };
-export default withStyles(styles)(Address);
+export default Address;
