@@ -2,8 +2,8 @@
 Description=Address Maven
 
 [Service]
-ExecStart=/usr/bin/npm start
-WorkingDirectory=/home/ubuntu/bin/AMaven
+ExecStart=/home/ubuntu/npm/bin/npm start
+WorkingDirectory=/home/ubuntu/bin/address-maven
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
