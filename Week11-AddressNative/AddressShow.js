@@ -25,17 +25,31 @@ class AddressShow extends Component {
                     <View style={styles.buttonView}>
                         <Button
                             onPress={this.props.setAddress}
+                            title="First"
+                            color="#841584"
+                            accessibilityLabel="Learn more about this purple button"
+                            onPress={(event) => this.props.setAddress(0, 0, event)}
+                        />
+                        <Button
+                            onPress={this.props.setAddress}
                             title="Prev"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
-                            onPress={(event) => this.props.setAddress(-1, event)}
+                            onPress={(event) => this.props.setAddress(-1, 1, event)}
                         />
                         <Button
                             onPress={this.props.setAddress}
                             title="Next"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
-                            onPress={(event) => this.props.setAddress(1, event)}
+                            onPress={(event) => this.props.setAddress(1, 1, event)}
+                        />
+                        <Button
+                            onPress={this.props.setAddress}
+                            title="Last"
+                            color="#841584"
+                            accessibilityLabel="Learn more about this purple button"
+                            onPress={(event) => this.props.setAddress(0, 99, event)}
                         />
                     </View>
                 </View>

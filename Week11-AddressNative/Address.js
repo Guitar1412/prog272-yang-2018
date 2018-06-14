@@ -31,21 +31,29 @@ export default class Address extends React.Component {
             });
     };
 
-    setAddress = (offset) => {
+    setAddress = (offset, offset2) => {
         if(this.debug) {
             console.log('setAddress called');
         }
+        if (offset === 0 && offset2 === 0){
+            this.addressIndex = 0;
+        }
+
+        if (offset === 0 &&offset2 === 99){
+            this.addressIndex = this.addressList.length -1;
+        }
+
         this.addressIndex += offset;
         if (this.addressIndex > this.addressList.length -1){
             this.addressIndex = 0;
         }
+
         else if (this.addressIndex < 0){
             this.addressIndex = this.addressList.length -1;
-
         }
+
         this.setState ({
             address: this.addressList[this.addressIndex]
-
         });
         this.debug = true;
     };
