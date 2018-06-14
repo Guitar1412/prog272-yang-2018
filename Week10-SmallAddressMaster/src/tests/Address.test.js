@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import Address from '../components/Address';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import addresses from '../address-list';
 
-configure({ adapter: new Adapter() });
+
 import dataManager from '../tools/FakeDataManager';
 
 describe('Address tests', function() {
@@ -39,12 +40,6 @@ describe('Address tests', function() {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    // it('renders and displays the default first name', () => {
-    //     const wrapper = shallow(<Address/>);
-    //     expect(wrapper.find('WithStyles(AddressShow)').prop('address').firstName).toEqual(
-    //         'Tammy'
-    //     );
-    // });
 
     it('renders and displays the default first name', () => {
         //console.log(wrapper.dive().debug());
@@ -218,7 +213,4 @@ describe('Address tests', function() {
         });
     });
 
-    it('renders and displays the default first name from FakeData', () => {
-        expect(wrapper.state().address.firstName).toEqual('Patty');
-    });
 });
