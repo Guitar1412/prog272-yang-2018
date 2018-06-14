@@ -52,9 +52,7 @@ class AddressEditFields extends Component {
                     label="City"
                     type="string"
                     value={this.props.address.city}
-                    onChange={e =>
-                        this.props.addressChangedByUser('city', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('city', e)}
                     fullWidth
                 />
 
@@ -65,9 +63,7 @@ class AddressEditFields extends Component {
                     label="State"
                     type="string"
                     value={this.props.address.state}
-                    onChange={e =>
-                        this.props.addressChangedByUser('state', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('state', e)}
                     fullWidth
                 />
 
@@ -78,9 +74,7 @@ class AddressEditFields extends Component {
                     label="Zip"
                     type="string"
                     value={this.props.address.zip}
-                    onChange={e =>
-                        this.props.addressChangedByUser('zip', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('zip', e)}
                     fullWidth
                 />
                 <TextField
@@ -90,76 +84,68 @@ class AddressEditFields extends Component {
                     label="Phone"
                     type="string"
                     value={this.props.address.phone}
-                    onChange={e =>
-                        this.props.addressChangedByUser('phone', e)
-                    }
+                    onChange={e => this.props.addressChangedByUser('phone', e)}
                     fullWidth
                 />
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    id="fax"
-                    label="Fax"
-                    type="string"
-                    value={this.props.address.fax}
-                    onChange={e =>
-                        this.props.addressChangedByUser('fax', e)
-                    }
-                    fullWidth
-                />
+                {/*<TextField*/}
+                {/*autoFocus*/}
+                {/*margin="dense"*/}
+                {/*id="fax"*/}
+                {/*label="Fax"*/}
+                {/*type="string"*/}
+                {/*value={this.props.address.fax}*/}
+                {/*onChange={e => this.props.addressChangedByUser('fax', e)}*/}
+                {/*fullWidth*/}
+                {/*/>*/}
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    id="tollfree"
-                    label="Toll-free"
-                    type="string"
-                    value={this.props.address.tollfree}
-                    onChange={e =>
-                        this.props.addressChangedByUser('tollfree', e)
-                    }
-                    fullWidth
-                />
+                {/*<TextField*/}
+                {/*autoFocus*/}
+                {/*margin="dense"*/}
+                {/*id="tollfree"*/}
+                {/*label="Toll-free"*/}
+                {/*type="string"*/}
+                {/*value={this.props.address.tollfree}*/}
+                {/*onChange={e =>*/}
+                {/*this.props.addressChangedByUser('tollfree', e)*/}
+                {/*}*/}
+                {/*fullWidth*/}
+                {/*/>*/}
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    id="website"
-                    label="Website"
-                    type="string"
-                    value={this.props.address.website}
-                    onChange={e =>
-                        this.props.addressChangedByUser('website', e)
-                    }
-                    fullWidth
-                />
+                {/*<TextField*/}
+                {/*autoFocus*/}
+                {/*margin="dense"*/}
+                {/*id="website"*/}
+                {/*label="Website"*/}
+                {/*type="string"*/}
+                {/*value={this.props.address.website}*/}
+                {/*onChange={e =>*/}
+                {/*this.props.addressChangedByUser('website', e)*/}
+                {/*}*/}
+                {/*fullWidth*/}
+                {/*/>*/}
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    id="email"
-                    label="E-mail"
-                    type="string"
-                    value={this.props.address.email}
-                    onChange={e =>
-                        this.props.addressChangedByUser('email', e)
-                    }
-                    fullWidth
-                />
+                {/*<TextField*/}
+                {/*autoFocus*/}
+                {/*margin="dense"*/}
+                {/*id="email"*/}
+                {/*label="E-mail"*/}
+                {/*type="string"*/}
+                {/*value={this.props.address.email}*/}
+                {/*onChange={e => this.props.addressChangedByUser('email', e)}*/}
+                {/*fullWidth*/}
+                {/*/>*/}
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    id="contact"
-                    label="Contact"
-                    type="string"
-                    value={this.props.address.fax}
-                    onChange={e =>
-                        this.props.addressChangedByUser('fax', e)
-                    }
-                    fullWidth
-                />
+                {/*<TextField*/}
+                {/*autoFocus*/}
+                {/*margin="dense"*/}
+                {/*id="contact"*/}
+                {/*label="Contact"*/}
+                {/*type="string"*/}
+                {/*value={this.props.address.contact}*/}
+                {/*onChange={e => this.props.addressChangedByUser('contact', e)}*/}
+                {/*fullWidth*/}
+                {/*/>*/}
             </div>
         );
     }

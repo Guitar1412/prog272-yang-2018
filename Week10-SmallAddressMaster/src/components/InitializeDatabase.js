@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import tempAddressList from '../address-list';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
+//import AddressEdit from './AddressEdit';
 
 const styles = theme => ({
     root: {
@@ -66,18 +67,18 @@ class InitializeDatabase extends Component {
         });
     };
 
-    getFive = () => {
-        this.props.dataManager.db
-            .find({
-                selector: {
-                    _id: { $gte: null }
-                },
-                limit: 5
-            })
-            .then(docs => {
-                console.log(docs);
-            });
-    };
+    // getFive = () => {
+    //     this.props.dataManager.db
+    //         .find({
+    //             selector: {
+    //                 _id: { $gte: null }
+    //             },
+    //             limit: 5
+    //         })
+    //         .then(docs => {
+    //             console.log(docs);
+    //         });
+    // };
 
     showIndex = () => {
         this.props.dataManager.db
@@ -111,7 +112,7 @@ class InitializeDatabase extends Component {
                     <Typography variant="headline">Enter Sync Mode</Typography>
                     <Typography variant="body1" gutterBottom align="center">
                         Use the sync button when you are connected to the
-                        Internet. By default, you are not in sync mode. Don't
+                        Internet. By default, you are not in sync mode. Do not
                         press this button if you are offline.
                     </Typography>
                     <Button
@@ -186,7 +187,18 @@ class InitializeDatabase extends Component {
 }
 
 InitializeDatabase.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    dataManager: PropTypes.shape({
+        sync: PropTypes.func,
+        convertAddress: PropTypes.func,
+        deleteDatabase: PropTypes.func,
+        createIndex: PropTypes.func,
+        db: PropTypes.shape({
+            info: PropTypes.func,
+            find: PropTypes.func,
+            getIndexes: PropTypes.func
+        })
+    })
 };
 
 export default withStyles(styles)(InitializeDatabase);

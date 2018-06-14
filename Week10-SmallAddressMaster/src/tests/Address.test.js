@@ -7,16 +7,15 @@ configure({ adapter: new Adapter() });
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import addresses from '../address-list';
 
-
 import dataManager from '../tools/FakeDataManager';
 
 describe('Address tests', function() {
     let wrapper = null;
 
     beforeEach(() => {
-        wrapper = shallow(<Address
-            dataManager={dataManager}
-            addressList={addresses[1]}/>);
+        wrapper = shallow(
+            <Address dataManager={dataManager} addressList={addresses[1]} />
+        );
     });
 
     const themeDark = createMuiTheme({
@@ -25,9 +24,8 @@ describe('Address tests', function() {
         }
     });
 
-    const addressProp = wrapper => wrapper
-        .find('WithStyles(AddressShow)')
-        .prop('name');
+    const addressProp = wrapper =>
+        wrapper.find('WithStyles(AddressShow)').prop('name');
 
     it('renders without crashing', () => {
         const div = document.createElement('div');
@@ -39,7 +37,6 @@ describe('Address tests', function() {
         );
         ReactDOM.unmountComponentAtNode(div);
     });
-
 
     it('renders and displays the default first name', () => {
         //console.log(wrapper.dive().debug());
@@ -124,16 +121,17 @@ describe('Address tests', function() {
     };
 
     it('renders state of firstName after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(
-                wrapper.find('WithStyles(AddressShow)').prop('address').firstName
+                wrapper.find('WithStyles(AddressShow)').prop('address')
+                    .firstName
             ).toEqual('Tammy');
         });
     });
 
     it('renders state of lastName after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(
                 wrapper.find('AddressShow').prop('address').lastName
@@ -142,7 +140,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of address after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').address).toEqual(
                 '709 Hart Senate Office Building'
@@ -151,7 +149,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of city after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').city).toEqual(
                 'Washington DC'
@@ -160,7 +158,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of state after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').state).toEqual(
                 'WI'
@@ -169,7 +167,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of zip after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').zip).toEqual(
                 '20510'
@@ -178,7 +176,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of phone after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').phone).toEqual(
                 '202-224-5653'
@@ -187,7 +185,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of website after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').website).toEqual(
                 'https://www.baldwin.senate.gov'
@@ -196,7 +194,7 @@ describe('Address tests', function() {
     });
 
     it('renders state of email after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').email).toEqual(
                 ''
@@ -205,12 +203,11 @@ describe('Address tests', function() {
     });
 
     it('renders state of contact after button click', () => {
-        const wrapper = shallow(<Address address={addresses[1]}/>);
+        const wrapper = shallow(<Address address={addresses[1]} />);
         afterClickFieldTest(wrapper, () => {
             expect(wrapper.find('AddressShow').prop('address').contact).toEqual(
                 'https://www.baldwin.senate.gov/feedback'
             );
         });
     });
-
 });

@@ -7,7 +7,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import AddressEditFields from './AddressEditFields';
 import addressList from '../address-list';
-
+//import Address from './Address';
+import PropTypes from 'prop-types';
 //const styles = {};
 
 export default class AddressEdit extends React.Component {
@@ -37,13 +38,11 @@ export default class AddressEdit extends React.Component {
                     onClose={this.userClosedDialogNormal}
                     aria-labelledby="form-dialog-title"
                 >
-
                     <DialogTitle id="form-dialog-title">
                         Edit Address
                     </DialogTitle>
 
                     <DialogContent>
-
                         <DialogContentText>
                             Fill in the fields of the address record.
                         </DialogContentText>
@@ -53,17 +52,41 @@ export default class AddressEdit extends React.Component {
                         />
 
                         <DialogActions>
-                            <Button onClick={this.userCanceledDialog} color="primary">
+                            <Button
+                                onClick={this.userCanceledDialog}
+                                color="primary"
+                            >
                                 Cancel
                             </Button>
-                            <Button onClick={this.userClosedDialogNormal} color="primary">
+                            <Button
+                                onClick={this.userClosedDialogNormal}
+                                color="primary"
+                            >
                                 Ok
                             </Button>
                         </DialogActions>
-
                     </DialogContent>
                 </Dialog>
             </div>
         );
     }
 }
+
+AddressEdit.propTypes = {
+    address: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        address: PropTypes.string,
+        city: PropTypes.string,
+        state: PropTypes.string,
+        zip: PropTypes.string,
+        phone: PropTypes.string,
+        website: PropTypes.string,
+        email: PropTypes.string,
+        contact: PropTypes.string,
+        fax: PropTypes.string,
+        tollfree: PropTypes.string
+    }),
+    open: PropTypes.bool,
+    addressEdit: PropTypes.func
+};

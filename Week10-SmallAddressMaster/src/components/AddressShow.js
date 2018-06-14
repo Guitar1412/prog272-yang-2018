@@ -95,11 +95,11 @@ class AddressShow extends Component {
                     <p>{this.props.name.state}</p>
                     <p>{this.props.name.zip}</p>
                     <p>{this.props.name.phone}</p>
-                    <p>{this.props.name.fax}</p>
-                    <p>{this.props.name.tollfree}</p>
-                    <p>{this.props.name.website}</p>
-                    <p>{this.props.name.email}</p>
-                    <p>{this.props.name.contact}</p>
+                    {/*<p>{this.props.name.fax}</p>*/}
+                    {/*<p>{this.props.name.tollfree}</p>*/}
+                    {/*<p>{this.props.name.website}</p>*/}
+                    {/*<p>{this.props.name.email}</p>*/}
+                    {/*<p>{this.props.name.contact}</p>*/}
 
                     <Button
                         color="secondary"
@@ -161,7 +161,25 @@ class AddressShow extends Component {
 }
 
 AddressShow.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    name: PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        address: PropTypes.string,
+        city: PropTypes.string,
+        state: PropTypes.string,
+        zip: PropTypes.string,
+        phone: PropTypes.string,
+        website: PropTypes.string,
+        email: PropTypes.string,
+        contact: PropTypes.string,
+        fax: PropTypes.string,
+        tollfree: PropTypes.string
+    }),
+    setAddress: PropTypes.func,
+    delete: PropTypes.func,
+    showAddress: PropTypes.func,
+    save: PropTypes.func
 };
 
 export default withStyles(styles)(AddressShow);

@@ -128,7 +128,7 @@ class Address extends Component {
         console.log(address);
 
         if (!address) {
-            return this.setState({editOpen: false});
+            return this.setState({ editOpen: false });
         }
 
         this.setState({
@@ -140,7 +140,7 @@ class Address extends Component {
     setEdits = (name, event) => {
         var data = this.props.name;
         data[name] = event.target.value;
-        this.setState({edits: data});
+        this.setState({ edits: data });
     };
 
     render() {
@@ -165,6 +165,6 @@ Address.propTypes = {
         firstName: PropTypes.string,
         lastName: PropTypes.string
     }),
-    open:PropTypes.bool
+    //open: PropTypes.bool
 };
 export default Address;

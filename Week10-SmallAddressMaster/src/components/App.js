@@ -9,7 +9,7 @@ import InitializeDatabase from './InitializeDatabase';
 import Header from './Header';
 import Home from './Home';
 
-const styles = theme => ({
+const styles = () => ({
     container: {
         flexGrow: 1
     }
@@ -21,7 +21,7 @@ class App extends Component {
     }
 
     render() {
-        const { classes } = this.props;
+        //const { classes } = this.props;
         return (
             <BrowserRouter>
                 <div className="App">
