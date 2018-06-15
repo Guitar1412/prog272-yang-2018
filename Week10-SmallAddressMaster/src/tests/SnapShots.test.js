@@ -1,8 +1,8 @@
 import React from 'react';
-//import AddressShow from '../components/AddressShow';
+import AddressShow from '../components/AddressShow';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-//import addresses from '../address-list';
+import addresses from '../address-list';
 import Address from '../components/Address';
 //import App from '../components/App';
 //import Header from '../components/Header';
@@ -15,11 +15,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 configure({ adapter: new Adapter() });
 
 describe('SnapShot Tests', function() {
-
-    // it('should take an AddressShow snapshot', () => {
-    //     const elfTree = shallow(<AddressShow name={addresses[0]}/>);
-    //     expect(elfTree).toMatchSnapshot();
-    // });
+    it('should take an AddressShow snapshot', () => {
+        const elfTree = shallow(<AddressShow name={addresses[0]}/>);
+        expect(elfTree).toMatchSnapshot();
+    });
     //
     // it('renders and reads link before click', () => {
     //     const wrapper = shallow (<App/>);
@@ -35,10 +34,10 @@ describe('SnapShot Tests', function() {
     });
 
     it('renders and reads link before click', () => {
-        const addresstree = shallow (
+        const addresstree = shallow(
             <MuiThemeProvider theme={themeDark}>
                 <Address />
-            </MuiThemeProvider>,
+            </MuiThemeProvider>
         );
         // console.log('Address Debug output:');
         // console.log(addresstree.debug());
@@ -87,5 +86,3 @@ describe('SnapShot Tests', function() {
     //     expect(headertree).toMatchSnapshot();
     // });
 });
-
-

@@ -4,26 +4,26 @@ import './index.css';
 import App from './components/App';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import registerServiceWorker from './registerServiceWorker';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+import orange from '@material-ui/core/colors/orange';
+import brown from '@material-ui/core/colors/brown';
 
-const themePurple = createMuiTheme({
+const getMuiTheme = createMuiTheme({
     palette: {
         primary: {
-            light: purple[300],
-            main: purple[500],
-            dark: purple[700]
+            light: orange[300],
+            main: orange[500],
+            dark: orange[700]
         },
         secondary: {
-            light: green[300],
-            main: green[500],
-            dark: green[700]
+            light: brown[300],
+            main: brown[500],
+            dark: brown[700]
         }
     }
 });
 
 ReactDOM.render(
-    <MuiThemeProvider theme={themePurple}>
+    <MuiThemeProvider theme={getMuiTheme}>
         <App />
     </MuiThemeProvider>,
 

@@ -45,11 +45,11 @@ export default class Address extends React.Component {
 
         this.addressIndex += offset;
         if (this.addressIndex > this.addressList.length -1){
-            this.addressIndex = 0;
+            this.addressIndex = this.addressList.length -1;
         }
 
         else if (this.addressIndex < 0){
-            this.addressIndex = this.addressList.length -1;
+            this.addressIndex = 0;
         }
 
         this.setState ({
@@ -60,10 +60,8 @@ export default class Address extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.textAlign}>
-                    Welcome to Expo!!
-                </Text>
+            <View>
+
                 <View className="App">
                     <AddressShow address={this.state.address}
                         setAddress={this.setAddress}

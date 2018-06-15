@@ -4,6 +4,9 @@ export default StyleSheet.create({
     container: {
         marginTop: 25,
         padding: 10,
+        flex: 1,
+        //marginBottom: 1,
+        backgroundColor: 'coral'
     },
     addressContainer: {
         backgroundColor: '#fff',
@@ -15,7 +18,12 @@ export default StyleSheet.create({
     },
     nav: {
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        //justifyContent: 'space-around',
+        backgroundColor: 'skyblue'
+    },
+    displayArea: {
+      flexDirection: 'column',
+      backgroundColor: 'yellow'
     },
     navItem: {
         flex: 1,
@@ -24,28 +32,26 @@ export default StyleSheet.create({
     },
     textAlign: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 10,
         padding: 10,
+        marginBottom: 5
     },
     subNavItem: {
         padding: 5,
     },
     topic: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 10,
     },
     buttonView: {
-        marginRight: 40,
-        marginLeft: 40,
-        marginTop: 10,
-        paddingTop: 20,
-        paddingBottom: 20,
-        paddingLeft: 20,
-        paddingRight: 20,
-        backgroundColor: '#68a0cf',
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: '#fff',
-        width: '75%'
+        flexDirection: 'row',
+        //justifyContent: 'center',
+        justifyContent: 'space-around',
+        paddingTop: 1,
+        paddingBottom: 1,
+        paddingLeft: 10,
+        paddingRight: 10,
+        backgroundColor: 'burlywood',
+        width: "100%"
     }
 });

@@ -10,7 +10,7 @@ class AddressShow extends Component {
 
     render() {
         return (
-            <View className="App">
+            <View className="App" style={styles.displayArea}>
                 <Text className="App-intro" style={styles.textAlign}>First Name: {this.props.address.firstName}</Text>
                 <Text className="App-intro" style={styles.textAlign}>Last Name: {this.props.address.lastName}</Text>
                 <Text className="App-intro" style={styles.textAlign}>Address: {this.props.address.address}</Text>
@@ -21,38 +21,38 @@ class AddressShow extends Component {
                 <Text className="App-intro" style={styles.textAlign}>Fax: {this.props.address.fax}</Text>
                 <Text className="App-intro" style={styles.textAlign}>Tollfree: {this.props.address.tollfree}</Text>
 
-                <View style={styles.addressContainer}>
+                {/*<View style={styles.addressContainer}>*/}
                     <View style={styles.buttonView}>
                         <Button
                             onPress={this.props.setAddress}
-                            title="First"
+                            title="<<"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                             onPress={(event) => this.props.setAddress(0, 0, event)}
                         />
                         <Button
                             onPress={this.props.setAddress}
-                            title="Prev"
+                            title="<"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                             onPress={(event) => this.props.setAddress(-1, 1, event)}
                         />
                         <Button
                             onPress={this.props.setAddress}
-                            title="Next"
+                            title=">"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                             onPress={(event) => this.props.setAddress(1, 1, event)}
                         />
                         <Button
                             onPress={this.props.setAddress}
-                            title="Last"
+                            title=">>"
                             color="#841584"
                             accessibilityLabel="Learn more about this purple button"
                             onPress={(event) => this.props.setAddress(0, 99, event)}
                         />
                     </View>
-                </View>
+                {/*</View>*/}
             </View>
         );
     }

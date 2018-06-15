@@ -164,7 +164,7 @@ Address.propTypes = {
     name: PropTypes.shape({
         firstName: PropTypes.string,
         lastName: PropTypes.string
-    }),
+    })
     //open: PropTypes.bool
 };
 export default Address;

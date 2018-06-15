@@ -53,8 +53,9 @@ class Header extends Component {
                             <MenuIcon />
                         </IconButton>
                         <Typography
-                            variant="title"
-                            color="inherit"
+                            variant="headline"
+                            color="secondary"
+                            align="center"
                             className={classes.flex}
                         >
                             Address Maven

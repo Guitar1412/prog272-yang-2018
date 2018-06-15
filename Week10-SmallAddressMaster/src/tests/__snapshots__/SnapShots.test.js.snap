@@ -297,3 +297,102 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`SnapShot Tests should take an AddressShow snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WithStyles(AddressShow)
+    name={
+        Object {
+            "address": "unknown",
+            "city": "unknown",
+            "contact": "unknown",
+            "email": "unknown",
+            "fax": "unknown",
+            "firstName": "unknown",
+            "lastName": "unknown",
+            "phone": "unknown",
+            "state": "unknown",
+            "tollfree": "unknown",
+            "website": "unknown",
+            "zip": "unknown",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "classes": Object {
+        "button": "AddressShow-button-1",
+        "container": "AddressShow-container-2",
+        "rootBar": "AddressShow-rootBar-3",
+      },
+      "name": Object {
+        "address": "unknown",
+        "city": "unknown",
+        "contact": "unknown",
+        "email": "unknown",
+        "fax": "unknown",
+        "firstName": "unknown",
+        "lastName": "unknown",
+        "phone": "unknown",
+        "state": "unknown",
+        "tollfree": "unknown",
+        "website": "unknown",
+        "zip": "unknown",
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "classes": Object {
+          "button": "AddressShow-button-1",
+          "container": "AddressShow-container-2",
+          "rootBar": "AddressShow-rootBar-3",
+        },
+        "name": Object {
+          "address": "unknown",
+          "city": "unknown",
+          "contact": "unknown",
+          "email": "unknown",
+          "fax": "unknown",
+          "firstName": "unknown",
+          "lastName": "unknown",
+          "phone": "unknown",
+          "state": "unknown",
+          "tollfree": "unknown",
+          "website": "unknown",
+          "zip": "unknown",
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

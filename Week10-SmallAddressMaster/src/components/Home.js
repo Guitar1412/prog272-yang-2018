@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
-const styles = {
-
-
-};
+import logo from '../logo.svg';
+const styles = {};
 
 class Home extends Component {
     render() {
@@ -13,19 +11,22 @@ class Home extends Component {
         return (
             <div>
                 <Typography
-                    variant="title"
-                    color="#f0f"
+                    variant="display2"
+                    color="primary"
+                    align="center"
                     className={classes.flex}
                 >
+                    <p />
                     Welcome to React!
                 </Typography>
+                <p />
+                <img src={logo} className="App-logo" alt="logo" />
             </div>
         );
     }
 }
 Home.propTypes = {
-    classes: PropTypes.object.isRequired,
-
+    classes: PropTypes.object.isRequired
 };
 //export default Home;
 export default withStyles(styles)(Home);
